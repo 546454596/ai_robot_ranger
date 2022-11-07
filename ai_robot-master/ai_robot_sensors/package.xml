@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ai_robot_sensors</name>
+  <version>0.0.1</version>
+    <description>
+        Ground robot software stack for SJTU-NLS robot. 
+    </description>
+    <maintainer email="gongzheng@sjtu.edu.cn">GONG Zheng</maintainer>
+	  <author email="gongzheng@sjtu.edu.cn">GONG Zheng</author>
+    <license>TODO</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <depend>razor_imu_9dof</depend>
+    <depend>zed_wrapper</depend>
+    <depend>ublox_gps</depend>
+    <depend>ublox_msgs</depend>
+    <depend>ublox_serialization</depend>
+    <exec_depend></exec_depend>
+
+</package>

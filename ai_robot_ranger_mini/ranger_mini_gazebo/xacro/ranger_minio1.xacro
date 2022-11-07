@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="ranger_mini" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find ranger_mini_gazebo)/xacro/ranger_mini.gazebo.xacro"/>
+  <xacro:include filename="$(find ranger_mini_gazebo)/xacro/ranger_mini_sensors.xacro"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0020128 -0.010156 0.17923"
+        rpy="0 0 0" />
+      <mass
+        value="13.798" />
+      <inertia
+        ixx="0.34493"
+        ixy="0.00017425"
+        ixz="0.012514"
+        iyy="0.50765"
+        iyz="-0.00032598"
+        izz="0.47397" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right_steering_Link">
+    <inertial>
+      <origin
+        xyz="0.027654 -9.7797E-05 0.056972"
+        rpy="0 0 0" />
+      <mass
+        value="0.073216" />
+      <inertia
+        ixx="0.00013395"
+        ixy="1.3869E-07"
+        ixz="-2.0695E-05"
+        iyy="0.00013639"
+        iyz="1.253E-07"
+        izz="4.717E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/front_right_steering_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/front_right_steering_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_steering_joint"
+    type="revolute">
+    <origin
+      xyz="0.19099 -0.19041 0.01645"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_steering_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.1"
+      upper="2.1"
+      effort="5"
+      velocity="6.28" />
+  </joint>
+  <link
+    name="ffr_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.0013327 4.0662E-08 1.7665E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.1201" />
+      <inertia
+        ixx="0.0049707"
+        ixy="-2.2928E-10"
+        ixz="5.612E-11"
+        iyy="0.0026789"
+        iyz="1.9331E-08"
+        izz="0.0026788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/ffr_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/ffr_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ffr_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0017257 0.12705"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_steering_Link" />
+    <child
+      link="ffr_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="1.5"
+      velocity="20" />
+  </joint>
+  <link
+    name="front_left_steering_link">
+    <inertial>
+      <origin
+        xyz="-0.027525 3.7566E-05 0.060887"
+        rpy="0 0 0" />
+      <mass
+        value="0.077756" />
+      <inertia
+        ixx="0.00015537"
+        ixy="5.3181E-08"
+        ixz="2.0273E-05"
+        iyy="0.00015672"
+        iyz="-3.6245E-08"
+        izz="4.7714E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/front_left_steering_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/front_left_steering_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_steering_joint"
+    type="revolute">
+    <origin
+      xyz="0.18926 0.16959 0.016647"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_steering_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.1"
+      upper="2.1"
+      effort="5"
+      velocity="6.28" />
+  </joint>
+  <link
+    name="ffl_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.0013315 7.1398E-06 2.7061E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.1199" />
+      <inertia
+        ixx="0.0049693"
+        ixy="-7.0341E-08"
+        ixz="-1.1121E-08"
+        iyy="0.0026776"
+        iyz="2.2967E-07"
+        izz="0.0026788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/ffl_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/ffl_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ffl_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.12725"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_steering_link" />
+    <child
+      link="ffl_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="1.5"
+      velocity="20" />
+  </joint>
+  <link
+    name="rear_left_steering_link">
+    <inertial>
+      <origin
+        xyz="-0.027512 3.7566E-05 0.060885"
+        rpy="0 0 0" />
+      <mass
+        value="0.077756" />
+      <inertia
+        ixx="0.00015537"
+        ixy="5.2693E-08"
+        ixz="2.0275E-05"
+        iyy="0.00015668"
+        iyz="-3.6171E-08"
+        izz="4.7676E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rear_left_steering_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rear_left_steering_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_steering_joint"
+    type="revolute">
+    <origin
+      xyz="-0.16904 0.16959 0.016647"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_steering_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.1"
+      upper="2.1"
+      effort="5"
+      velocity="6.28" />
+  </joint>
+  <link
+    name="rfl_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.0013315 7.1398E-06 2.7061E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.1199" />
+      <inertia
+        ixx="0.0049693"
+        ixy="-7.0341E-08"
+        ixz="-1.1121E-08"
+        iyy="0.0026776"
+        iyz="2.2967E-07"
+        izz="0.0026788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rfl_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rfl_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rfl_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.12725"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_steering_link" />
+    <child
+      link="rfl_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="1.5"
+      velocity="20" />
+  </joint>
+  <link
+    name="rear_right_steering_link">
+    <inertial>
+      <origin
+        xyz="0.029316 -0.00033194 0.060884"
+        rpy="0 0 0" />
+      <mass
+        value="0.077756" />
+      <inertia
+        ixx="0.00015536"
+        ixy="-5.271E-08"
+        ixz="-2.0273E-05"
+        iyy="0.00015668"
+        iyz="-3.6117E-08"
+        izz="4.7677E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rear_right_steering_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rear_right_steering_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_steering_joint"
+    type="revolute">
+    <origin
+      xyz="-0.16867 -0.19221 0.016647"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_steering_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.1"
+      upper="2.1"
+      effort="5"
+      velocity="6.28" />
+  </joint>
+  <link
+    name="rfr_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.0013313 -2.9338E-05 -7.1852E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.1198" />
+      <inertia
+        ixx="0.0049693"
+        ixy="-2.0698E-08"
+        ixz="-6.8857E-08"
+        iyy="0.0026789"
+        iyz="-1.1937E-08"
+        izz="0.0026775" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rfr_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/rfr_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rfr_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0018036 -0.00036925 0.12725"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_steering_link" />
+    <child
+      link="rfr_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="1.5"
+      velocity="20" />
+  </joint>
+ 
+  
+  <link
+    name="tof_Link">
+    <inertial>
+      <origin
+        xyz="-0.028592 2.7756E-17 2.7756E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.26363" />
+      <inertia
+        ixx="0.00018493"
+        ixy="1.7633E-20"
+        ixz="-7.9798E-20"
+        iyy="0.00017969"
+        iyz="7.6773E-21"
+        izz="0.00017969" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/tof_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ranger_mini/meshes/tof_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_tof_joint"
+    type="fixed">
+    <origin
+      xyz="0.25526 -0.010129 0.41326"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="tof_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <transmission name="front_left_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_left_steering_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_left_steering_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>30</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+	<transmission name="front_right_steering_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="front_right_steering_joint">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="front_right_steering_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+  <transmission name="rear_left_steering_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rear_left_steering_joint">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rear_left_steering_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+  <transmission name="rear_right_steering_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rear_right_steering_joint">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rear_right_steering_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+  <transmission name="ffl_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="ffl_wheel_joint">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="ffl_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+	</transmission>
+  
+  <transmission name="ffr_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="ffr_wheel_joint">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="ffr_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+  <transmission name="rfl_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rfl_wheel_joint">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rfl_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+   <transmission name="rfr_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rfr_wheel_joint">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rfr_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+   <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <legacyModeNS>true</legacyModeNS>
+      <robotNamespace>/ranger_mini</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+</robot>

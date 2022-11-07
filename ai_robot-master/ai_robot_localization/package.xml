@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ai_robot_localization</name>
+  <version>0.0.1</version>
+    <description>
+        Ground robot software stack for SJTU-NLS robot. 
+    </description>
+    <maintainer email="gongzheng@sjtu.edu.cn">GONG Zheng</maintainer>
+	  <author email="gongzheng@sjtu.edu.cn">GONG Zheng</author>
+    <license>TODO</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+        <depend>cartographer_ros</depend>
+
+
+</package>

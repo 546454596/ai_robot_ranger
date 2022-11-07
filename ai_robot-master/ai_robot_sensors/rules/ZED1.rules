@@ -1,0 +1,2 @@
+KERNEL=="ttyUSB*", ATTRS{idVendor}=="2b03", ATTRS{idProduct}=="f582", MODE:="0777",  SYMLINK+="ZED1USB" 
+

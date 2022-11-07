@@ -1,0 +1,8 @@
+<!--orbslam load launch, can only be used with modified ORB-SLAM-->
+<launch>
+  <arg name="mapfolder" default="/home/zx/tmps/test/"/>
+  <node name="orb_slam_node" pkg="orb_slam_saveload" type="Stereo" args="$(find orb_slam_saveload)/../../../Vocabulary/ORBvoc.txt $(find orb_slam_saveload)/zedstereo.yaml false 1 true $(arg mapfolder)" output="screen">
+  </node>
+</launch>
+
+
