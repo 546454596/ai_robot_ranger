@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: ai_robot_clean
+Description: Description of ai_robot_clean
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lclean_robot
+Requires: actionlib costmap_2d geometry_msgs move_base_msgs nav_msgs roscpp tf

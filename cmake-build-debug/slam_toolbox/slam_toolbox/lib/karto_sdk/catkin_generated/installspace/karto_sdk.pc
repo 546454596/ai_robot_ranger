@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: karto_sdk
+Description: Description of karto_sdk
+Version: 1.1.4
+Cflags: -I${prefix}/include -I/usr/include -I/usr/local/include
+Libs: -L${prefix}/lib -lkartoSlamToolbox /usr/local/lib/libboost_system.so /usr/local/lib/libboost_serialization.so /usr/local/lib/libboost_filesystem.so /usr/local/lib/libboost_thread.so -lpthread /usr/local/lib/libboost_chrono.so /usr/local/lib/libboost_date_time.so /usr/local/lib/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libtbb.so
+Requires: 

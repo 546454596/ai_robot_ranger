@@ -1,0 +1,8 @@
+prefix=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel
+
+Name: darknet_ros_msgs
+Description: Description of darknet_ros_msgs
+Version: 1.1.5
+Cflags: -I/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs geometry_msgs sensor_msgs message_runtime std_msgs

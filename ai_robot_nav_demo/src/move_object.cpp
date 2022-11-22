@@ -1,18 +1,12 @@
-/**********************
-Detect the object with yolo, then change the position of the object in camera to real position. 
-Finally move the ugv to the object
-**********************/
-
 #include "move_object.h"
 
-MoveObject::MoveObject() : it_(nh_), ac("move_base", true), detect_object(false), move_finish(false), get_object_position(false),
-						   getflagsuccess(false), robot_move(false), move_base("move_base", true)
+MoveObject::MoveObject() : it_(nh_), ac("move_base", true), detect_object(false), move_finish(false), get_object_position(false), getflagsuccess(false), robot_move(false), move_base("move_base", true)
 {
 	//topic sub:
 	Object_sub = nh_.subscribe("/darknet_ros/bounding_boxes", 1, &MoveObject::ObjectCallback, this);
-	image_sub_depth = it_.subscribe("/camera/depth/image_raw", 1, &MoveObject::imageDepthCb, this);
-	image_sub_color = it_.subscribe("/camera/rgb/image_raw", 1, &MoveObject::imageColorCb, this);
-	camera_info_sub_ = nh_.subscribe("/camera/depth/camera_info", 1, &MoveObject::cameraInfoCb, this);
+	image_sub_depth = it_.subscribe("/zed2/depth/depth_registered", 1, &MoveObject::imageDepthCb, this);
+	image_sub_color = it_.subscribe("/zed2/left_raw/image_raw_color", 1, &MoveObject::imageColorCb, this);
+	camera_info_sub_ = nh_.subscribe("/zed2/depth/camera_info", 1, &MoveObject::cameraInfoCb, this);
 }
 
 MoveObject::~MoveObject()
@@ -80,8 +74,8 @@ void MoveObject::imageColorCb(const sensor_msgs::ImageConstPtr &msg)
 		}
 
 		//先查询对齐的深度图像的深度信息，根据读取的camera info内参矩阵求解对应三维坐标
-//		real_z = 0.001 * depthImage.at<u_int16_t>(mousepos.y, mousepos.x);
-        real_z = 5.885;
+		real_z = 0.001 * depthImage.at<u_int16_t>(mousepos.y, mousepos.x);
+        //real_z = 5.885;
         cout << "Depth of the detected center: " << mousepos.x << ", " << mousepos.y << " is " << real_z << "\n";
 		real_x = (mousepos.x - camera_info.K.at(2)) / camera_info.K.at(0) * real_z;
         cout << "mousepose.x is: " << mousepos.x << " and " << "camera_info.K.at(2) is: " << camera_info.K.at(2) << "\n";

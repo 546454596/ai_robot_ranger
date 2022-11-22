@@ -1,0 +1,8 @@
+prefix=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel
+
+Name: ranger_mini
+Description: Description of ranger_mini
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

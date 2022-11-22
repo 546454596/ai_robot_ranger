@@ -1,0 +1,8 @@
+prefix=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel
+
+Name: voxel_grid
+Description: Description of voxel_grid
+Version: 1.16.7
+Cflags: -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/voxel_grid/include
+Libs: -L${prefix}/lib -lvoxel_grid
+Requires: roscpp

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: ai_robot_msgs
+Description: Description of ai_robot_msgs
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs geometry_msgs nav_msgs sensor_msgs message_runtime

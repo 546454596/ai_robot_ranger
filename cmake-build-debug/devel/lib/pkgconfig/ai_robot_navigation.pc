@@ -1,0 +1,8 @@
+prefix=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel
+
+Name: ai_robot_navigation
+Description: Description of ai_robot_navigation
+Version: 0.0.0
+Cflags: -I/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_navigation/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

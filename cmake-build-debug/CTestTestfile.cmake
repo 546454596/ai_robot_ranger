@@ -1,0 +1,36 @@
+# CMake generated Testfile for 
+# Source directory: /home/cx/brainnavi/ai_robot_ranger/src
+# Build directory: /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("ai_robot-master/ai_robot_localization")
+subdirs("ai_robot-master/ai_robot_sensors")
+subdirs("navigation/navigation")
+subdirs("ai_robot_ranger_mini/ranger_mini_control")
+subdirs("ai_robot_ranger_mini/ranger_mini_gazebo")
+subdirs("slam_toolbox/slam_toolbox_msgs")
+subdirs("navigation/map_server")
+subdirs("ai_robot-master/ai_robot_msgs")
+subdirs("darknet_ros/darknet_ros_msgs")
+subdirs("ai_robot-master/ai_robot_navigation")
+subdirs("darknet_ros/darknet_ros")
+subdirs("navigation/amcl")
+subdirs("navigation/fake_localization")
+subdirs("ai_robot_ranger_mini/ranger_mini")
+subdirs("slam_toolbox/slam_toolbox")
+subdirs("navigation/voxel_grid")
+subdirs("navigation/costmap_2d")
+subdirs("ai_robot_clean")
+subdirs("navigation/nav_core")
+subdirs("navigation/base_local_planner")
+subdirs("navigation/carrot_planner")
+subdirs("navigation/clear_costmap_recovery")
+subdirs("navigation/dwa_local_planner")
+subdirs("navigation/move_slow_and_clear")
+subdirs("navigation/navfn")
+subdirs("navigation/global_planner")
+subdirs("navigation/rotate_recovery")
+subdirs("navigation/move_base")
+subdirs("ai_robot_nav_demo")

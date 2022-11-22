@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: darknet_ros
+Description: Description of darknet_ros
+Version: 1.1.5
+Cflags: -I${prefix}/include -I/usr/local/include
+Libs: -L${prefix}/lib -ldarknet_ros_lib /usr/local/lib/libboost_thread.so -lpthread /usr/local/lib/libboost_chrono.so /usr/local/lib/libboost_system.so /usr/local/lib/libboost_date_time.so /usr/local/lib/libboost_atomic.so
+Requires: cv_bridge roscpp actionlib rospy std_msgs darknet_ros_msgs image_transport nodelet

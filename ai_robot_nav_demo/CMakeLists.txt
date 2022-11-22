@@ -9,6 +9,7 @@ project(ai_robot_nav_demo)
 ## is used, also find other catkin packages
 
 find_package(OpenCV REQUIRED)
+catkin_package()
 find_package(catkin REQUIRED COMPONENTS
   amcl
   map_server

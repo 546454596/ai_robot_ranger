@@ -1,0 +1,2 @@
+set(ai_robot_msgs_MESSAGE_FILES "/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg/MpTraj.msg;/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg/TopoMetric.msg")
+set(ai_robot_msgs_SERVICE_FILES "/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/srv/restart_nav.srv;/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/srv/set_destination.srv")
