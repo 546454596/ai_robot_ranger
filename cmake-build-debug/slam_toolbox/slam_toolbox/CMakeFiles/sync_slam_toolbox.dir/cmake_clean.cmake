@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libsync_slam_toolbox.pdb"
-  "../../devel/lib/libsync_slam_toolbox.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libsync_slam_toolbox.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libsync_slam_toolbox.so"
   "CMakeFiles/sync_slam_toolbox_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/sync_slam_toolbox_autogen.dir/ParseCache.txt"
   "sync_slam_toolbox_autogen"

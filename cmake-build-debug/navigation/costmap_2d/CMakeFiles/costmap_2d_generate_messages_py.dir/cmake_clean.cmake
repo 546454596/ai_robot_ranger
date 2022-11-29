@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py"
-  "../../devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py"
   "CMakeFiles/costmap_2d_generate_messages_py"
 )
 

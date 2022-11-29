@@ -67,7 +67,7 @@ include navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_
 include navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/progress.make
 
 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-coordinates_test.xml "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/costmap_2d/coordinates_test --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-coordinates_test.xml"
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-coordinates_test.xml "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/coordinates_test --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-coordinates_test.xml"
 
 run_tests_costmap_2d_gtest_coordinates_test: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test
 run_tests_costmap_2d_gtest_coordinates_test: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/build.make

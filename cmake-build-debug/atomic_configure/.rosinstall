@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/setup.sh
+    local-name: /home/cx/brainnavi/ai_robot_ranger/devel/setup.sh

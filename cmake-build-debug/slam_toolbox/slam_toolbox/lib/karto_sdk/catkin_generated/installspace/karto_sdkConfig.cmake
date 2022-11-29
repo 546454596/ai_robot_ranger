@@ -68,7 +68,7 @@ set(karto_sdk_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(karto_sdk_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/slam_toolbox/slam_toolbox/lib/karto_sdk)
-  set(karto_sdk_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(karto_sdk_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(karto_sdk_INSTALL_PREFIX "")
   set(karto_sdk_PREFIX ${karto_sdk_DEVEL_PREFIX})
 else()

@@ -67,7 +67,7 @@ include navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parse
 include navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/progress.make
 
 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-array_parser_test.xml "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/costmap_2d/array_parser_test --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-array_parser_test.xml"
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-array_parser_test.xml "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/array_parser_test --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/costmap_2d/gtest-array_parser_test.xml"
 
 _run_tests_costmap_2d_gtest_array_parser_test: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test
 _run_tests_costmap_2d_gtest_array_parser_test: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/build.make

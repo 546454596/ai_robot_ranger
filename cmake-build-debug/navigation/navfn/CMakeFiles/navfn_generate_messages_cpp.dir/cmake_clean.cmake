@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/include/navfn/MakeNavPlan.h"
-  "../../devel/include/navfn/SetCostmap.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/navfn/MakeNavPlan.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/navfn/SetCostmap.h"
   "CMakeFiles/navfn_generate_messages_cpp"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libdarknet_ros_lib.pdb"
-  "../../devel/lib/libdarknet_ros_lib.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libdarknet_ros_lib.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libdarknet_ros_lib.so"
   "CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/art.c.o"
   "CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/captcha.c.o"
   "CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/cifar.c.o"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/costmap_2d/array_parser_test"
-  "../../devel/lib/costmap_2d/array_parser_test.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/array_parser_test"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/array_parser_test.pdb"
   "CMakeFiles/array_parser_test.dir/test/array_parser_test.cpp.o"
 )
 

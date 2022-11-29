@@ -29,7 +29,7 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "devel/include"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include"
   "../navigation/amcl/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"

@@ -68,7 +68,7 @@ set(fake_localization_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(fake_localization_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/navigation/fake_localization)
-  set(fake_localization_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(fake_localization_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(fake_localization_INSTALL_PREFIX "")
   set(fake_localization_PREFIX ${fake_localization_DEVEL_PREFIX})
 else()

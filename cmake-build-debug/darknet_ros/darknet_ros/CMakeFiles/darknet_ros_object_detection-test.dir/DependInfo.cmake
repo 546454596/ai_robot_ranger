@@ -28,7 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../darknet_ros/darknet/src"
   "../darknet_ros/darknet/include"
   "../darknet_ros/darknet_ros/include"
-  "devel/include"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/src/googletest/googletest/include"

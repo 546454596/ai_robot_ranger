@@ -68,7 +68,7 @@ set(ai_robot_clean_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ai_robot_clean_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/ai_robot_clean)
-  set(ai_robot_clean_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(ai_robot_clean_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(ai_robot_clean_INSTALL_PREFIX "")
   set(ai_robot_clean_PREFIX ${ai_robot_clean_DEVEL_PREFIX})
 else()

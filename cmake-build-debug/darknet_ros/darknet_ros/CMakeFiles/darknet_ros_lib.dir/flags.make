@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = -DDARKNET_FILE_PATH=\"/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"darknet_ros\" -Ddarknet_ros_lib_EXPORTS
 
-C_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/src -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/include -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet_ros/include -I/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv
+C_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/src -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/include -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet_ros/include -I/home/cx/brainnavi/ai_robot_ranger/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv
 
 C_FLAGS = -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g
 
 CXX_DEFINES = -DDARKNET_FILE_PATH=\"/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"darknet_ros\" -Ddarknet_ros_lib_EXPORTS
 
-CXX_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/src -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/include -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet_ros/include -I/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv
+CXX_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/src -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet/include -I/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet_ros/include -I/home/cx/brainnavi/ai_robot_ranger/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv
 
 CXX_FLAGS = -g -fPIC   -O4 -g -std=gnu++11
 

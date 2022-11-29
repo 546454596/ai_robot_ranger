@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "../../devel/share/gennodejs/ros/base_local_planner/msg/Position2DInt.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/base_local_planner/msg/Position2DInt.js"
   "CMakeFiles/base_local_planner_generate_messages_nodejs"
 )
 

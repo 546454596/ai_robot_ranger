@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/cx/brainnavi/ai_robot_ranger/src/naviga
 PROJECT_CATKIN_DEPENDS = "geometry_msgs;nav_core;pluginlib;roscpp".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lmove_slow_and_clear".split(';') if "-lmove_slow_and_clear" != "" else []
 PROJECT_NAME = "move_slow_and_clear"
-PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel"
+PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/devel"
 PROJECT_VERSION = "1.16.7"

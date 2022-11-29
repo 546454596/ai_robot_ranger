@@ -61,7 +61,7 @@
   <arg name="keyf" default="$(find ai_robot_navigation)/mapdata/denKeyfPos.txt"/>
   <arg name="keyfrelation" default="$(find ai_robot_navigation)/mapdata/denKeyfPosRelation.txt"/>
   <arg name="mappoint" default="$(find ai_robot_navigation)/mapdata/MapPointsPos.txt"/>
-  <!--files path-->
+  <!--files path .The following three parameters are loaded ub findpathsrm.cpp/FindPathSRM -->
   <param name="denKeyfPos" value="$(arg keyf)"/>
   <param name="denKeyfPosRelation" value="$(arg keyfrelation)"/>
   <param name="MapPointsPos" value="$(arg mappoint)"/>

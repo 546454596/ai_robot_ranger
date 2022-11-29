@@ -73,7 +73,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include/eigen3"
   "/usr/include/ni"
   "/usr/include/openni2"
-  "devel/include"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

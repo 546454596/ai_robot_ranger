@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/global_planner/planner"
-  "../../devel/lib/global_planner/planner.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/global_planner/planner"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/global_planner/planner.pdb"
   "CMakeFiles/planner.dir/src/plan_node.cpp.o"
 )
 

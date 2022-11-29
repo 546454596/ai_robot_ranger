@@ -67,7 +67,7 @@ include navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag
 include navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/progress.make
 
 navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/small_loop_crazy_driving_prg_indexed.bag /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/amcl/test/small_loop_crazy_driving_prg_indexed.bag 4a58d1a7962914009d99000d06e5939c --ignore-error
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/small_loop_crazy_driving_prg_indexed.bag /home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/test/small_loop_crazy_driving_prg_indexed.bag 4a58d1a7962914009d99000d06e5939c --ignore-error
 
 amcl_small_loop_crazy_driving_prg_indexed.bag: navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag
 amcl_small_loop_crazy_driving_prg_indexed.bag: navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/build.make

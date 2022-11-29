@@ -68,7 +68,7 @@ set(amcl_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(amcl_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/navigation/amcl)
-  set(amcl_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(amcl_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(amcl_INSTALL_PREFIX "")
   set(amcl_PREFIX ${amcl_DEVEL_PREFIX})
 else()

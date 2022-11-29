@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libamcl_map.pdb"
-  "../../devel/lib/libamcl_map.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libamcl_map.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libamcl_map.so"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map.c.o"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.o"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.o"

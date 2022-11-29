@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/cx/brainnavi/ai_robot_ranger/src/naviga
 PROJECT_CATKIN_DEPENDS = "std_msgs;geometry_msgs;tf2_ros;costmap_2d".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "nav_core"
-PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel"
+PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/devel"
 PROJECT_VERSION = "1.16.7"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/share/roseus/ros/costmap_2d/manifest.l"
-  "../../devel/share/roseus/ros/costmap_2d/msg/VoxelGrid.l"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/costmap_2d/manifest.l"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/costmap_2d/msg/VoxelGrid.l"
   "CMakeFiles/costmap_2d_generate_messages_eus"
 )
 

@@ -67,7 +67,7 @@ include navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.di
 include navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/progress.make
 
 navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/texas_willow_hallway_loop_indexed.bag /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/amcl/test/texas_willow_hallway_loop_indexed.bag 27deb742fdcd3af44cf446f39f2688a8 --ignore-error
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/texas_willow_hallway_loop_indexed.bag /home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/test/texas_willow_hallway_loop_indexed.bag 27deb742fdcd3af44cf446f39f2688a8 --ignore-error
 
 amcl_texas_willow_hallway_loop_indexed.bag: navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag
 amcl_texas_willow_hallway_loop_indexed.bag: navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/build.make

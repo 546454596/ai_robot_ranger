@@ -68,7 +68,7 @@ set(ranger_mini_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ranger_mini_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/ai_robot_ranger_mini/ranger_mini)
-  set(ranger_mini_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(ranger_mini_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(ranger_mini_INSTALL_PREFIX "")
   set(ranger_mini_PREFIX ${ranger_mini_DEVEL_PREFIX})
 else()

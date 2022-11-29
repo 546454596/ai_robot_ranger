@@ -68,7 +68,7 @@ set(ai_robot_sensors_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ai_robot_sensors_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_sensors)
-  set(ai_robot_sensors_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(ai_robot_sensors_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(ai_robot_sensors_INSTALL_PREFIX "")
   set(ai_robot_sensors_PREFIX ${ai_robot_sensors_DEVEL_PREFIX})
 else()

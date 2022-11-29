@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "../../devel/share/common-lisp/ros/costmap_2d/msg/VoxelGrid.lisp"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/common-lisp/ros/costmap_2d/msg/VoxelGrid.lisp"
   "CMakeFiles/costmap_2d_generate_messages_lisp"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../devel/lib/ai_robot_nav_demo/Odom_test"
-  "../devel/lib/ai_robot_nav_demo/Odom_test.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_nav_demo/Odom_test"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_nav_demo/Odom_test.pdb"
   "CMakeFiles/Odom_test.dir/src/Odom_test.cpp.o"
 )
 

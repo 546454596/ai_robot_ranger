@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libbase_local_planner.pdb"
-  "../../devel/lib/libbase_local_planner.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libbase_local_planner.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libbase_local_planner.so"
   "CMakeFiles/base_local_planner.dir/src/costmap_model.cpp.o"
   "CMakeFiles/base_local_planner.dir/src/footprint_helper.cpp.o"
   "CMakeFiles/base_local_planner.dir/src/goal_functions.cpp.o"

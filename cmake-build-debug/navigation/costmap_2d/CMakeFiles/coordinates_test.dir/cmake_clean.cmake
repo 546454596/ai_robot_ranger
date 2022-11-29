@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/costmap_2d/coordinates_test"
-  "../../devel/lib/costmap_2d/coordinates_test.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/coordinates_test"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/coordinates_test.pdb"
   "CMakeFiles/coordinates_test.dir/test/coordinates_test.cpp.o"
 )
 

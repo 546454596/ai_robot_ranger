@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/cx/brainnavi/ai_robot_ranger/src/naviga
 PROJECT_CATKIN_DEPENDS = "roscpp".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lvoxel_grid".split(';') if "-lvoxel_grid" != "" else []
 PROJECT_NAME = "voxel_grid"
-PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel"
+PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/devel"
 PROJECT_VERSION = "1.16.7"

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/cx/brainnavi/ai_robot_ranger/src/slam_t
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lkartoSlamToolbox;/usr/local/lib/libboost_system.so;/usr/local/lib/libboost_serialization.so;/usr/local/lib/libboost_filesystem.so;/usr/local/lib/libboost_thread.so;-lpthread;/usr/local/lib/libboost_chrono.so;/usr/local/lib/libboost_date_time.so;/usr/local/lib/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libtbb.so".split(';') if "-lkartoSlamToolbox;/usr/local/lib/libboost_system.so;/usr/local/lib/libboost_serialization.so;/usr/local/lib/libboost_filesystem.so;/usr/local/lib/libboost_thread.so;-lpthread;/usr/local/lib/libboost_chrono.so;/usr/local/lib/libboost_date_time.so;/usr/local/lib/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libtbb.so" != "" else []
 PROJECT_NAME = "karto_sdk"
-PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel"
+PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/devel"
 PROJECT_VERSION = "1.1.4"

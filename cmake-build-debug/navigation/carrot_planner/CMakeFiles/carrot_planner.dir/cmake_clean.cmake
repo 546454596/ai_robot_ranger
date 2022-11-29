@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libcarrot_planner.pdb"
-  "../../devel/lib/libcarrot_planner.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libcarrot_planner.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libcarrot_planner.so"
   "CMakeFiles/carrot_planner.dir/src/carrot_planner.cpp.o"
 )
 

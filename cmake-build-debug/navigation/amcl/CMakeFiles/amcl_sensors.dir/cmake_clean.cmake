@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libamcl_sensors.pdb"
-  "../../devel/lib/libamcl_sensors.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libamcl_sensors.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libamcl_sensors.so"
   "CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_laser.cpp.o"
   "CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_odom.cpp.o"
   "CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_sensor.cpp.o"

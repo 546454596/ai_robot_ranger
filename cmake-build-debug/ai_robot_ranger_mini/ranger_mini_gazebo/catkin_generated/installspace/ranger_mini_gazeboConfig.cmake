@@ -68,7 +68,7 @@ set(ranger_mini_gazebo_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ranger_mini_gazebo_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/ai_robot_ranger_mini/ranger_mini_gazebo)
-  set(ranger_mini_gazebo_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(ranger_mini_gazebo_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(ranger_mini_gazebo_INSTALL_PREFIX "")
   set(ranger_mini_gazebo_PREFIX ${ranger_mini_gazebo_DEVEL_PREFIX})
 else()

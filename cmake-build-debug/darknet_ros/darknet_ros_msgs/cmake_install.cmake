@@ -56,13 +56,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/msg" TYPE FILE FILES
-    "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsAction.msg"
-    "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionGoal.msg"
-    "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionResult.msg"
-    "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionFeedback.msg"
-    "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsGoal.msg"
-    "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsResult.msg"
-    "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsFeedback.msg"
+    "/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/msg/CheckForObjectsAction.msg"
+    "/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionGoal.msg"
+    "/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionResult.msg"
+    "/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionFeedback.msg"
+    "/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/msg/CheckForObjectsGoal.msg"
+    "/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/msg/CheckForObjectsResult.msg"
+    "/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/msg/CheckForObjectsFeedback.msg"
     )
 endif()
 
@@ -71,27 +71,27 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include/darknet_ros_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/devel/include/darknet_ros_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/roseus/ros/darknet_ros_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/darknet_ros_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/common-lisp/ros/darknet_ros_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/devel/share/common-lisp/ros/darknet_ros_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/gennodejs/ros/darknet_ros_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/darknet_ros_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

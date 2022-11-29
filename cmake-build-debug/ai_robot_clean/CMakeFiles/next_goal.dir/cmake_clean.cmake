@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../devel/lib/ai_robot_clean/next_goal"
-  "../devel/lib/ai_robot_clean/next_goal.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_clean/next_goal"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_clean/next_goal.pdb"
   "CMakeFiles/next_goal.dir/src/next_goal.cpp.o"
 )
 

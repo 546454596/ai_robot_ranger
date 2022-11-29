@@ -66,24 +66,24 @@ include navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/com
 # Include the progress variables for this target.
 include navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/progress.make
 
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py: devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py: devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py
 
-devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: ../navigation/costmap_2d/msg/VoxelGrid.msg
-devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
-devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/share/geometry_msgs/msg/Point32.msg
-devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: ../navigation/costmap_2d/msg/VoxelGrid.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/share/geometry_msgs/msg/Point32.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG costmap_2d/VoxelGrid"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/msg/VoxelGrid.msg -Icostmap_2d:/home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Imap_msgs:/opt/ros/melodic/share/map_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p costmap_2d -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/python2.7/dist-packages/costmap_2d/msg
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/msg/VoxelGrid.msg -Icostmap_2d:/home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Imap_msgs:/opt/ros/melodic/share/map_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p costmap_2d -o /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg
 
-devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py: devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for costmap_2d"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/python2.7/dist-packages/costmap_2d/msg --initpy
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg --initpy
 
-costmap_2d_generate_messages_py: devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py
-costmap_2d_generate_messages_py: devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py
+costmap_2d_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py
+costmap_2d_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py
 costmap_2d_generate_messages_py: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py
 costmap_2d_generate_messages_py: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/build.make
 .PHONY : costmap_2d_generate_messages_py

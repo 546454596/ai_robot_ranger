@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/slam_toolbox/merge_maps_kinematic"
-  "../../devel/lib/slam_toolbox/merge_maps_kinematic.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/slam_toolbox/merge_maps_kinematic"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/slam_toolbox/merge_maps_kinematic.pdb"
   "CMakeFiles/merge_maps_kinematic_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/merge_maps_kinematic_autogen.dir/ParseCache.txt"
   "merge_maps_kinematic_autogen"

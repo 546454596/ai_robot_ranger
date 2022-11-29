@@ -68,7 +68,7 @@ set(slam_toolbox_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(slam_toolbox_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/slam_toolbox/slam_toolbox)
-  set(slam_toolbox_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(slam_toolbox_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(slam_toolbox_INSTALL_PREFIX "")
   set(slam_toolbox_PREFIX ${slam_toolbox_DEVEL_PREFIX})
 else()

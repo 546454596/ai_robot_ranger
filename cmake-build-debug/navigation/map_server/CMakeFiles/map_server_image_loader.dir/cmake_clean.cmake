@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libmap_server_image_loader.pdb"
-  "../../devel/lib/libmap_server_image_loader.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libmap_server_image_loader.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libmap_server_image_loader.so"
   "CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libglobal_planner.pdb"
-  "../../devel/lib/libglobal_planner.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libglobal_planner.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libglobal_planner.so"
   "CMakeFiles/global_planner.dir/src/astar.cpp.o"
   "CMakeFiles/global_planner.dir/src/dijkstra.cpp.o"
   "CMakeFiles/global_planner.dir/src/gradient_path.cpp.o"

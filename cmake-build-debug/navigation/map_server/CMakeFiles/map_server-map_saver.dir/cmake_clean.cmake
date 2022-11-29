@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/map_server/map_saver"
-  "../../devel/lib/map_server/map_saver.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/map_server/map_saver"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/map_server/map_saver.pdb"
   "CMakeFiles/map_server-map_saver.dir/src/map_saver.cpp.o"
 )
 

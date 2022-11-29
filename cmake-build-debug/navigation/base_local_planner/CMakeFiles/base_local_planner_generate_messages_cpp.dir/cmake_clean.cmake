@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "../../devel/include/base_local_planner/Position2DInt.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/base_local_planner/Position2DInt.h"
   "CMakeFiles/base_local_planner_generate_messages_cpp"
 )
 

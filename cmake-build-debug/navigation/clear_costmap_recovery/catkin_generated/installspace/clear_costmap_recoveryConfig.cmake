@@ -68,7 +68,7 @@ set(clear_costmap_recovery_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(clear_costmap_recovery_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/navigation/clear_costmap_recovery)
-  set(clear_costmap_recovery_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(clear_costmap_recovery_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(clear_costmap_recovery_INSTALL_PREFIX "")
   set(clear_costmap_recovery_PREFIX ${clear_costmap_recovery_DEVEL_PREFIX})
 else()

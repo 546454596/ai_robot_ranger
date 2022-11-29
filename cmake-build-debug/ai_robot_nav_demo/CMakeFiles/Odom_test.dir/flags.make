@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ai_robot_nav_demo\"
 
-CXX_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/src/ai_robot_nav_demo/include -I/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/amcl/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/map_server/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv
+CXX_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/src/ai_robot_nav_demo/include -I/home/cx/brainnavi/ai_robot_ranger/devel/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/amcl/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/map_server/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv
 
 CXX_FLAGS = -g
 

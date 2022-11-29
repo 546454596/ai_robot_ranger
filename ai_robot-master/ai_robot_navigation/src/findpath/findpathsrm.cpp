@@ -119,11 +119,11 @@ FindPathSRM::~FindPathSRM()
     mylog.close();
 }
 
-void FindPathSRM::initService()
+void FindPathSRM::initService() //this demo does not load the /topo/savedone topic by service
 {
     reloadmap_sub = nh.subscribe("/topo/savedone", 1, &FindPathSRM::reloadCB, this);
-    restart_sub = nh.subscribe("/ai_robot/restart_nav", 1, &FindPathSRM::restartNavCallback, this);
-    targetP_pub = nh.advertise<geometry_msgs::Pose>("/ai_robot/findpath/targetP",1);
+    restart_sub = nh.subscribe("/ai_robot/restart_nav", 1, &FindPathSRM::restartNavCallback, this);//from obsavoid node, 重新启动nav
+    targetP_pub = nh.advertise<geometry_msgs::Pose>("/ai_robot/findpath/targetP",1); // 输出局部目的地，发送给obsavoid node
 }
 
 double FindPathSRM::getShortestPathLength()
@@ -139,9 +139,9 @@ bool FindPathSRM::findPath()
         return 0;
     }
     //testShowNode();
-    int64_t start1=0,end1=0;
-    start1 = cv::getTickCount();
-    if(findStartEndNode<unibn::L2Distance<pcl::PointXYZRGB> >())
+    int64_t start1=0, end1=0;
+    start1 = cv::getTickCount(); //该函数返回的值为从某一时刻（例如计算机启动）开始，计算机总共经过的tick次数，除以getTickFrequency()(返回CPU在1s内发出tick的次数)，从而活的时间（单位为s）
+    if(findStartEndNode<unibn::L2Distance<pcl::PointXYZRGB>>())
     {
         end1 = cv::getTickCount();
         double _t = 1000*double(end1 - start1)/cv::getTickFrequency();
@@ -149,7 +149,7 @@ bool FindPathSRM::findPath()
         start1 = end1;
         mylog << _t << " ";
         // mylog << "-----start new find path task-----" <<endl;
-        if(!astar<unibn::L2Distance<pcl::PointXYZRGB> >()){
+        if(!astar<unibn::L2Distance<pcl::PointXYZRGB>>()){ //启动A*路径规划
             mylog << 0 << endl;
             // fail to find path
             return 0;
@@ -170,7 +170,7 @@ bool FindPathSRM::findPath()
     // mylog << "search path time:" << _t << " ms." << endl;
     return 1;
 }
-
+//设置可视化位置
 void FindPathSRM::setPosForVisual(float _nowx, float _nowy, float _nowz, float _nowyaw)
 {
     nowfviP.x = _nowx;
@@ -193,7 +193,7 @@ void FindPathSRM::setPosForVisual(float _nowx, float _nowy, float _nowz, float _
         --justReplan;
     }
 }
-
+//实现可视化
 void FindPathSRM::display()
 {
 if(isAllFileExit)
@@ -304,7 +304,7 @@ void FindPathSRM::resetAll(float _startx, float _starty, float _startz,
     endP.x = _endx;
     endP.y = _endy;
     endP.z = _endz;
-    idp_targetNode = 0;
+    idp_targetNode = 0;//target point id when move along path
     cnt_calpotan = 0;
     time_calpotan_total = 0;
     time_maxcalpo = 0;
@@ -317,7 +317,7 @@ void FindPathSRM::resetAll(float _startx, float _starty, float _startz,
     if(isAllFileExit)
     {
         pNode[pNode.size()-1].x = _endx;
-        pNode[pNode.size()-1].y = _endy;
+        pNode[pNode.size()-1].y = _endy;//keyframe position, the last one is destination  vector<pathnode> pNode
         pNode[pNode.size()-1].z = _endz;
         pNode[pNode.size()-2].x = _startx;
         pNode[pNode.size()-2].y = _starty;
@@ -682,13 +682,13 @@ bool FindPathSRM::readLink()
         keyPosLink.push_back(tmp);
         distmp = unibn::L2Distance<pcl::PointXYZRGB>::sqrt(
                     unibn::L2Distance<pcl::PointXYZRGB>::compute(
-                        keyPosPC->points[i],keyPosPC->points[j]));
+                        keyPosPC->points[i],keyPosPC->points[j]));//计算两拓扑节点之间的欧式距离
                 /*sqrt(pow((keyPosPC->points[i].x-keyPosPC->points[j].x),2)
                     + pow((keyPosPC->points[i].y-keyPosPC->points[j].y),2)
                     + pow((keyPosPC->points[i].z-keyPosPC->points[j].z),2));*/
 
         pNode[i].addLink(j, distmp);
-        pNode[j].addLink(i, distmp);
+        pNode[j].addLink(i, distmp);//构建无向图
     }
     cout << "read link------>" << endl
          << "  total " << keyPosLink.size() << " link." << endl;
@@ -785,19 +785,18 @@ void FindPathSRM::setstring(string &str, int k)
     }
 }
 
-template <typename Distance>
+template <typename Distance>//泛型编程，Distance是函数所使用的数据类型的占位符名称。这个名称在函数定义中使用。
 bool FindPathSRM::findStartEndNode()
 {
     float mindistS = 10000, mindistE = 10000, tmpdist;
     for(int i=0; i<keyPosPC->size(); ++i)
     {
-        tmpdist = Distance::compute(keyPosPC->points[i], startP);
+        tmpdist = Distance::compute(keyPosPC->points[i], startP);//计算距离startP的欧式距离
         if(tmpdist<mindistS && !mapOct.isBlock<Distance >(startP, keyPosPC->points[i], mappointSparse))
         {
             id_startNode = i;
             mindistS = tmpdist;
         }
-
         tmpdist = Distance::compute(keyPosPC->points[i], endP);
         if(tmpdist<mindistE && !mapOct.isBlock<Distance >(endP, keyPosPC->points[i], mappointSparse))
         {
@@ -805,14 +804,11 @@ bool FindPathSRM::findStartEndNode()
             mindistE = tmpdist;
         }
     }
-
     //cout << "start node id:" << id_startNode << ", end node id:" << id_endNode << endl;
-    if(id_startNode<0 || id_endNode<0)
-    {
+    if(id_startNode<0 || id_endNode<0){
         return 0;
     }
-    else
-    {
+    else{
         return 1;
     }
 }
@@ -959,18 +955,11 @@ bool FindPathSRM::astar()
     if(path_point.size()>=3 && !mapOct.isBlock<Distance >(startorend, nearone, 1.2*mappointSparse)){
         path_point.erase(path_point.begin()+path_point.size()-2);
         path.erase(path.begin()+path.size()-2);
-//        nearone.x = path_point[path_point.size()-3].x;
-//        nearone.y = path_point[path_point.size()-3].y;
-//        nearone.z = path_point[path_point.size()-3].z;
     }
 
     idp_targetNode = path.size() - 1;
     pathid_near_node = path.size() - 1; //which path node drone is near
-    // cout << "Find path done!" << endl;
-    // for(int i=0;i<path.size();++i){
-    //     cout<<path[i]<<"("<<path_point[i].x<<","<<path_point[i].y<<","<<path_point[i].z<<")"<<"<<<";
-    // }
-    // cout<<endl;
+
     justReplan = 500;
     return valid_path;
 }
@@ -1109,10 +1098,8 @@ void FindPathSRM::restartNavCallback(const geometry_msgs::Pose::ConstPtr msg){
 }
 
 void FindPathSRM::reloadCB(const std_msgs::StringConstPtr& msg){
-    // _denKeyfPos = msg->data+"node.txt";
-    // _denKeyfPosRelation = msg->data+"edge.txt";
-    _denKeyfPos = msg->data+"denKeyfPos.txt";
-    _denKeyfPosRelation = msg->data+"denKeyfPosRelation.txt";
+    _denKeyfPos = msg->data+"denKeyfPos.txt";  // _denKeyfPos = msg->data+"node.txt";
+    _denKeyfPosRelation = msg->data+"denKeyfPosRelation.txt"; // _denKeyfPosRelation = msg->data+"edge.txt";
     _MapPointsPos = msg->data+"MapPointsPos.txt";
     cout << "loading new topomap from " << msg->data << endl;
     if(reconstructGraph()){

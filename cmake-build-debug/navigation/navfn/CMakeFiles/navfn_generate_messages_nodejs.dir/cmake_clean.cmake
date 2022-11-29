@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/share/gennodejs/ros/navfn/srv/MakeNavPlan.js"
-  "../../devel/share/gennodejs/ros/navfn/srv/SetCostmap.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/navfn/srv/MakeNavPlan.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/navfn/srv/SetCostmap.js"
   "CMakeFiles/navfn_generate_messages_nodejs"
 )
 

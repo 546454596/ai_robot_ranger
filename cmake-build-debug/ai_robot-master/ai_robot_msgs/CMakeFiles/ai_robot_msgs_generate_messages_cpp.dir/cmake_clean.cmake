@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "../../devel/include/ai_robot_msgs/MpTraj.h"
-  "../../devel/include/ai_robot_msgs/TopoMetric.h"
-  "../../devel/include/ai_robot_msgs/restart_nav.h"
-  "../../devel/include/ai_robot_msgs/set_destination.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/ai_robot_msgs/MpTraj.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/ai_robot_msgs/TopoMetric.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/ai_robot_msgs/restart_nav.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/ai_robot_msgs/set_destination.h"
   "CMakeFiles/ai_robot_msgs_generate_messages_cpp"
 )
 

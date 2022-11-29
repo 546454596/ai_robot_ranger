@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libamcl_pf.pdb"
-  "../../devel/lib/libamcl_pf.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libamcl_pf.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libamcl_pf.so"
   "CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.o"
   "CMakeFiles/amcl_pf.dir/src/amcl/pf/pf.c.o"
   "CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.o"

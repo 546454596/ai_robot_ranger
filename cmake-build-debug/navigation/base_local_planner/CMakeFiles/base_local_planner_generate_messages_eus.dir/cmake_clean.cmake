@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/share/roseus/ros/base_local_planner/manifest.l"
-  "../../devel/share/roseus/ros/base_local_planner/msg/Position2DInt.l"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/base_local_planner/manifest.l"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/base_local_planner/msg/Position2DInt.l"
   "CMakeFiles/base_local_planner_generate_messages_eus"
 )
 

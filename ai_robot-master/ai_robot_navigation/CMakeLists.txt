@@ -172,4 +172,9 @@ set_target_properties(  pointcloud_viewer_node
 )
 add_executable(setDesination_client src/findpath/setDestinationClient.cpp)
 target_link_libraries(setDesination_client ${catkin_LIBRARIES})
+
+add_dependencies(brain_node ${catkin_EXPORTED_TARGETS})
+add_dependencies(obsavoid_node ${catkin_EXPORTED_TARGETS})
+add_dependencies(gennodemap_node ${catkin_EXPORTED_TARGETS})
+add_dependencies(setDesination_client ${catkin_EXPORTED_TARGETS})
 #add_dependencies(setDesination_client beginner_tutorials_gencpp)

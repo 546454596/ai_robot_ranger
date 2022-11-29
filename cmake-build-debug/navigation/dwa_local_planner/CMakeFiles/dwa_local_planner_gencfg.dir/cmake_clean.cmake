@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "../../devel/include/dwa_local_planner/DWAPlannerConfig.h"
-  "../../devel/lib/python2.7/dist-packages/dwa_local_planner/cfg/DWAPlannerConfig.py"
-  "../../devel/share/dwa_local_planner/docs/DWAPlannerConfig-usage.dox"
-  "../../devel/share/dwa_local_planner/docs/DWAPlannerConfig.dox"
-  "../../devel/share/dwa_local_planner/docs/DWAPlannerConfig.wikidoc"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/dwa_local_planner/DWAPlannerConfig.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/dwa_local_planner/cfg/DWAPlannerConfig.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/dwa_local_planner/docs/DWAPlannerConfig-usage.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/dwa_local_planner/docs/DWAPlannerConfig.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/dwa_local_planner/docs/DWAPlannerConfig.wikidoc"
   "CMakeFiles/dwa_local_planner_gencfg"
 )
 

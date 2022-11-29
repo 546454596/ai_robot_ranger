@@ -68,7 +68,7 @@ set(ai_robot_msgs_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ai_robot_msgs_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs)
-  set(ai_robot_msgs_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(ai_robot_msgs_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(ai_robot_msgs_INSTALL_PREFIX "")
   set(ai_robot_msgs_PREFIX ${ai_robot_msgs_DEVEL_PREFIX})
 else()

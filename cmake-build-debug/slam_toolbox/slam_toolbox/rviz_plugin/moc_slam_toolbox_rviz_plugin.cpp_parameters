@@ -1,5 +1,5 @@
 -I/home/cx/brainnavi/ai_robot_ranger/src/slam_toolbox/slam_toolbox/include
--I/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include
+-I/home/cx/brainnavi/ai_robot_ranger/devel/include
 -I/home/cx/brainnavi/ai_robot_ranger/src/slam_toolbox/slam_toolbox/lib/karto_sdk/include
 -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/map_server/include
 -I/opt/ros/melodic/include

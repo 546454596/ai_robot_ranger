@@ -86,59 +86,59 @@ clear_tester_OBJECTS = \
 # External object files for target clear_tester
 clear_tester_EXTERNAL_OBJECTS =
 
-devel/lib/clear_costmap_recovery/clear_tester: navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/test/clear_tester.cpp.o
-devel/lib/clear_costmap_recovery/clear_tester: navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make
-devel/lib/clear_costmap_recovery/clear_tester: devel/lib/libclear_costmap_recovery.so
-devel/lib/clear_costmap_recovery/clear_tester: gtest/googlemock/gtest/libgtest.so
-devel/lib/clear_costmap_recovery/clear_tester: devel/lib/liblayers.so
-devel/lib/clear_costmap_recovery/clear_tester: devel/lib/libcostmap_2d.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/liborocos-kdl.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
-devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_system.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_thread.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_chrono.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_date_time.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_atomic.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/liblaser_geometry.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libtf.so
-devel/lib/clear_costmap_recovery/clear_tester: devel/lib/libvoxel_grid.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libclass_loader.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/libPocoFoundation.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libdl.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libroslib.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librospack.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libtf2_ros.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libactionlib.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libmessage_filters.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libroscpp.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librosconsole.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libxmlrpcpp.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libtf2.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libroscpp_serialization.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librostime.so
-devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libcpp_common.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_system.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libpthread.so
-devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-devel/lib/clear_costmap_recovery/clear_tester: navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../devel/lib/clear_costmap_recovery/clear_tester"
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/test/clear_tester.cpp.o
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /home/cx/brainnavi/ai_robot_ranger/devel/lib/libclear_costmap_recovery.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: gtest/googlemock/gtest/libgtest.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /home/cx/brainnavi/ai_robot_ranger/devel/lib/liblayers.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /home/cx/brainnavi/ai_robot_ranger/devel/lib/libcostmap_2d.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/liborocos-kdl.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_system.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_thread.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_chrono.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_date_time.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/local/lib/libboost_atomic.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libtf.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /home/cx/brainnavi/ai_robot_ranger/devel/lib/libvoxel_grid.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libclass_loader.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/libPocoFoundation.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libroslib.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librospack.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libtf2_ros.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libactionlib.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libmessage_filters.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libroscpp.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librosconsole.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libtf2.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/librostime.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/melodic/lib/libcpp_common.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester: navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester"
 	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/clear_costmap_recovery && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clear_tester.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build: devel/lib/clear_costmap_recovery/clear_tester
+navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build: /home/cx/brainnavi/ai_robot_ranger/devel/lib/clear_costmap_recovery/clear_tester
 .PHONY : navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build
 
 navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/clean:

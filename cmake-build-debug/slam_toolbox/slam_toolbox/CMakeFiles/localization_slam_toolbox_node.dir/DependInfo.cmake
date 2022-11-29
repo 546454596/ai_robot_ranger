@@ -27,7 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../slam_toolbox/slam_toolbox"
   "slam_toolbox/slam_toolbox/localization_slam_toolbox_node_autogen/include"
   "../slam_toolbox/slam_toolbox/include"
-  "devel/include"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include"
   "../slam_toolbox/slam_toolbox/lib/karto_sdk/include"
   "../navigation/map_server/include"
   "/opt/ros/melodic/include"

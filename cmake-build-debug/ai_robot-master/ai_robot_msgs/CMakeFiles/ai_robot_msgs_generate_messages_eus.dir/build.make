@@ -66,52 +66,52 @@ include ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages
 # Include the progress variables for this target.
 include ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus.dir/progress.make
 
-ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l
-ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l
-ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l
-ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l
-ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/manifest.l
+ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l
+ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l
+ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l
+ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l
+ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/manifest.l
 
-devel/share/roseus/ros/ai_robot_msgs/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for ai_robot_msgs"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/roseus/ros/ai_robot_msgs ai_robot_msgs std_msgs geometry_msgs nav_msgs sensor_msgs
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs ai_robot_msgs std_msgs geometry_msgs nav_msgs sensor_msgs
 
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: ../ai_robot-master/ai_robot_msgs/msg/MpTraj.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/nav_msgs/msg/Path.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/PointStamped.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: ../ai_robot-master/ai_robot_msgs/msg/MpTraj.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/nav_msgs/msg/Path.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/PointStamped.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from ai_robot_msgs/MpTraj.msg"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg/MpTraj.msg -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/roseus/ros/ai_robot_msgs/msg
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg/MpTraj.msg -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg
 
-devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: ../ai_robot-master/ai_robot_msgs/msg/TopoMetric.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/share/geometry_msgs/msg/PointStamped.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: ../ai_robot-master/ai_robot_msgs/msg/TopoMetric.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l: /opt/ros/melodic/share/geometry_msgs/msg/PointStamped.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from ai_robot_msgs/TopoMetric.msg"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg/TopoMetric.msg -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/roseus/ros/ai_robot_msgs/msg
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg/TopoMetric.msg -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg
 
-devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l: ../ai_robot-master/ai_robot_msgs/srv/restart_nav.srv
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l: ../ai_robot-master/ai_robot_msgs/srv/restart_nav.srv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from ai_robot_msgs/restart_nav.srv"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/srv/restart_nav.srv -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/roseus/ros/ai_robot_msgs/srv
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/srv/restart_nav.srv -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv
 
-devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l: ../ai_robot-master/ai_robot_msgs/srv/set_destination.srv
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l: ../ai_robot-master/ai_robot_msgs/srv/set_destination.srv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from ai_robot_msgs/set_destination.srv"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/srv/set_destination.srv -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/roseus/ros/ai_robot_msgs/srv
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/srv/set_destination.srv -Iai_robot_msgs:/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/melodic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -p ai_robot_msgs -o /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv
 
+ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/manifest.l
+ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l
+ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l
+ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l
+ai_robot_msgs_generate_messages_eus: /home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l
 ai_robot_msgs_generate_messages_eus: ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus
-ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/manifest.l
-ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/msg/MpTraj.l
-ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/msg/TopoMetric.l
-ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/srv/restart_nav.l
-ai_robot_msgs_generate_messages_eus: devel/share/roseus/ros/ai_robot_msgs/srv/set_destination.l
 ai_robot_msgs_generate_messages_eus: ai_robot-master/ai_robot_msgs/CMakeFiles/ai_robot_msgs_generate_messages_eus.dir/build.make
 .PHONY : ai_robot_msgs_generate_messages_eus
 

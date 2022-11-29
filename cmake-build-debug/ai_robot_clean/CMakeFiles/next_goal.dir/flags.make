@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ai_robot_clean\"
 
-CXX_INCLUDES = -I/usr/include/opencv -I/home/cx/brainnavi/ai_robot_ranger/src/ai_robot_clean/include -I/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/voxel_grid/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/local/include/eigen3 -I/usr/include/eigen3
+CXX_INCLUDES = -I/usr/include/opencv -I/home/cx/brainnavi/ai_robot_ranger/src/ai_robot_clean/include -I/home/cx/brainnavi/ai_robot_ranger/devel/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/voxel_grid/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/local/include/eigen3 -I/usr/include/eigen3
 
 CXX_FLAGS = -g -std=c++11
 

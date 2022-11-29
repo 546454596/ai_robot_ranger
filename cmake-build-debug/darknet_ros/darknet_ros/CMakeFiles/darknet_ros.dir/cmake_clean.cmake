@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/darknet_ros/darknet_ros"
-  "../../devel/lib/darknet_ros/darknet_ros.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros.pdb"
   "CMakeFiles/darknet_ros.dir/src/yolo_object_detector_node.cpp.o"
 )
 

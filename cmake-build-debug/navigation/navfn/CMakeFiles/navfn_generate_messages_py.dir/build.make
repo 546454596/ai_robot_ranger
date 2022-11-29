@@ -66,34 +66,34 @@ include navigation/navfn/CMakeFiles/navfn_generate_messages_py.dir/compiler_depe
 # Include the progress variables for this target.
 include navigation/navfn/CMakeFiles/navfn_generate_messages_py.dir/progress.make
 
-navigation/navfn/CMakeFiles/navfn_generate_messages_py: devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py
-navigation/navfn/CMakeFiles/navfn_generate_messages_py: devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py
-navigation/navfn/CMakeFiles/navfn_generate_messages_py: devel/lib/python2.7/dist-packages/navfn/srv/__init__.py
+navigation/navfn/CMakeFiles/navfn_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py
+navigation/navfn/CMakeFiles/navfn_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py
+navigation/navfn/CMakeFiles/navfn_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py
 
-devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
-devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: ../navigation/navfn/srv/MakeNavPlan.srv
-devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
-devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: ../navigation/navfn/srv/MakeNavPlan.srv
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV navfn/MakeNavPlan"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn/srv/MakeNavPlan.srv -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p navfn -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/python2.7/dist-packages/navfn/srv
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn/srv/MakeNavPlan.srv -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p navfn -o /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv
 
-devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
-devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py: ../navigation/navfn/srv/SetCostmap.srv
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py: ../navigation/navfn/srv/SetCostmap.srv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV navfn/SetCostmap"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn/srv/SetCostmap.srv -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p navfn -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/python2.7/dist-packages/navfn/srv
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn/srv/SetCostmap.srv -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p navfn -o /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv
 
-devel/lib/python2.7/dist-packages/navfn/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-devel/lib/python2.7/dist-packages/navfn/srv/__init__.py: devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py
-devel/lib/python2.7/dist-packages/navfn/srv/__init__.py: devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python srv __init__.py for navfn"
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/python2.7/dist-packages/navfn/srv --initpy
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv --initpy
 
-navfn_generate_messages_py: devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py
-navfn_generate_messages_py: devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py
-navfn_generate_messages_py: devel/lib/python2.7/dist-packages/navfn/srv/__init__.py
+navfn_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py
+navfn_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py
+navfn_generate_messages_py: /home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py
 navfn_generate_messages_py: navigation/navfn/CMakeFiles/navfn_generate_messages_py
 navfn_generate_messages_py: navigation/navfn/CMakeFiles/navfn_generate_messages_py.dir/build.make
 .PHONY : navfn_generate_messages_py

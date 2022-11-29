@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/amcl/amcl"
-  "../../devel/lib/amcl/amcl.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/amcl/amcl"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/amcl/amcl.pdb"
   "CMakeFiles/amcl.dir/src/amcl_node.cpp.o"
 )
 

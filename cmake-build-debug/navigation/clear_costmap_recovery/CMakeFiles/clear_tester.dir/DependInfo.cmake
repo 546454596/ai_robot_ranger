@@ -22,7 +22,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../navigation/clear_costmap_recovery/include"
-  "devel/include"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include"
   "../navigation/costmap_2d/include"
   "../navigation/voxel_grid/include"
   "../navigation/nav_core/include"

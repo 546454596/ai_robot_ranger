@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../devel/lib/ai_robot_clean/path_planning_node"
-  "../devel/lib/ai_robot_clean/path_planning_node.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_clean/path_planning_node"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_clean/path_planning_node.pdb"
   "CMakeFiles/path_planning_node.dir/src/CleaningPathPlanner.cpp.o"
   "CMakeFiles/path_planning_node.dir/src/PathPlanningNode.cpp.o"
 )

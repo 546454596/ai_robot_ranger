@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "../../devel/share/gennodejs/ros/ai_robot_msgs/msg/MpTraj.js"
-  "../../devel/share/gennodejs/ros/ai_robot_msgs/msg/TopoMetric.js"
-  "../../devel/share/gennodejs/ros/ai_robot_msgs/srv/restart_nav.js"
-  "../../devel/share/gennodejs/ros/ai_robot_msgs/srv/set_destination.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/ai_robot_msgs/msg/MpTraj.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/ai_robot_msgs/msg/TopoMetric.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/ai_robot_msgs/srv/restart_nav.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/ai_robot_msgs/srv/set_destination.js"
   "CMakeFiles/ai_robot_msgs_generate_messages_nodejs"
 )
 

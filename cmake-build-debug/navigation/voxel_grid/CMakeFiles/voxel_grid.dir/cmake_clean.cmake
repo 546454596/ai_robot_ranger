@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libvoxel_grid.pdb"
-  "../../devel/lib/libvoxel_grid.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libvoxel_grid.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libvoxel_grid.so"
   "CMakeFiles/voxel_grid.dir/src/voxel_grid.cpp.o"
 )
 

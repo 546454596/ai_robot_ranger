@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DHAVE_SYS_TIME_H -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"navfn\" -Dnavfn_EXPORTS
 
-CXX_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/voxel_grid/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/nav_core/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/local/include/eigen3 -I/usr/include/eigen3
+CXX_INCLUDES = -I/home/cx/brainnavi/ai_robot_ranger/devel/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/voxel_grid/include -I/home/cx/brainnavi/ai_robot_ranger/src/navigation/nav_core/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/local/include/eigen3 -I/usr/include/eigen3
 
 CXX_FLAGS = -g -fPIC
 

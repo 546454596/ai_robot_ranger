@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libcostmap_2d.pdb"
-  "../../devel/lib/libcostmap_2d.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libcostmap_2d.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libcostmap_2d.so"
   "CMakeFiles/costmap_2d.dir/src/array_parser.cpp.o"
   "CMakeFiles/costmap_2d.dir/src/costmap_2d.cpp.o"
   "CMakeFiles/costmap_2d.dir/src/costmap_2d_publisher.cpp.o"

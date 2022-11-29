@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/base_local_planner/point_grid"
-  "../../devel/lib/base_local_planner/point_grid.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/base_local_planner/point_grid"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/base_local_planner/point_grid.pdb"
   "CMakeFiles/point_grid.dir/src/point_grid_node.cpp.o"
 )
 

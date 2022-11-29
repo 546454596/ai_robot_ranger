@@ -67,7 +67,7 @@ include navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/compile
 include navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/progress.make
 
 navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/rosie_localization_stage.bag /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/amcl/test/rosie_localization_stage.bag 3347bf3835724cfa45e958c5c1846066 --ignore-error
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/rosie_localization_stage.bag /home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/test/rosie_localization_stage.bag 3347bf3835724cfa45e958c5c1846066 --ignore-error
 
 amcl_rosie_localization_stage.bag: navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag
 amcl_rosie_localization_stage.bag: navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/build.make

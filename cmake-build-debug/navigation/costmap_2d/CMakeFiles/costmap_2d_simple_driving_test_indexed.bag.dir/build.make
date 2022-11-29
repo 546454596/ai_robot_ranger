@@ -67,7 +67,7 @@ include navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.
 include navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/progress.make
 
 navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/costmap_2d/simple_driving_test_indexed.bag /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/costmap_2d/test/simple_driving_test_indexed.bag 61168cff9425b11e093ea3a627c81c8d --ignore-error
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/costmap_2d/simple_driving_test_indexed.bag /home/cx/brainnavi/ai_robot_ranger/devel/share/costmap_2d/test/simple_driving_test_indexed.bag 61168cff9425b11e093ea3a627c81c8d --ignore-error
 
 costmap_2d_simple_driving_test_indexed.bag: navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag
 costmap_2d_simple_driving_test_indexed.bag: navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/build.make

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/cx/brainnavi/ai_robot_ranger/src/naviga
 PROJECT_CATKIN_DEPENDS = "base_local_planner;costmap_2d;nav_core;pluginlib;roscpp;tf2;tf2_ros".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lcarrot_planner".split(';') if "-lcarrot_planner" != "" else []
 PROJECT_NAME = "carrot_planner"
-PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel"
+PROJECT_SPACE_DIR = "/home/cx/brainnavi/ai_robot_ranger/devel"
 PROJECT_VERSION = "1.16.7"

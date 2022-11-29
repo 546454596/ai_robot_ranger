@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py"
-  "../../devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py"
-  "../../devel/lib/python2.7/dist-packages/navfn/srv/__init__.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py"
   "CMakeFiles/navfn_generate_messages_py"
 )
 

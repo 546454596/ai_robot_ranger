@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "../../devel/include/global_planner/GlobalPlannerConfig.h"
-  "../../devel/lib/python2.7/dist-packages/global_planner/cfg/GlobalPlannerConfig.py"
-  "../../devel/share/global_planner/docs/GlobalPlannerConfig-usage.dox"
-  "../../devel/share/global_planner/docs/GlobalPlannerConfig.dox"
-  "../../devel/share/global_planner/docs/GlobalPlannerConfig.wikidoc"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/global_planner/GlobalPlannerConfig.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/global_planner/cfg/GlobalPlannerConfig.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/global_planner/docs/GlobalPlannerConfig-usage.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/global_planner/docs/GlobalPlannerConfig.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/global_planner/docs/GlobalPlannerConfig.wikidoc"
   "CMakeFiles/global_planner_gencfg"
 )
 

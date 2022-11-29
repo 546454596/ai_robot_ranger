@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libtoolbox_common.pdb"
-  "../../devel/lib/libtoolbox_common.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libtoolbox_common.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libtoolbox_common.so"
   "CMakeFiles/toolbox_common_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/toolbox_common_autogen.dir/ParseCache.txt"
   "toolbox_common_autogen"

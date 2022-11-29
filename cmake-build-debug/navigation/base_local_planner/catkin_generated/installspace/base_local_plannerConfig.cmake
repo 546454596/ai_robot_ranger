@@ -68,7 +68,7 @@ set(base_local_planner_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(base_local_planner_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/navigation/base_local_planner)
-  set(base_local_planner_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(base_local_planner_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(base_local_planner_INSTALL_PREFIX "")
   set(base_local_planner_PREFIX ${base_local_planner_DEVEL_PREFIX})
 else()

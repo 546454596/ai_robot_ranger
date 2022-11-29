@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../devel/lib/ai_robot_nav_demo/mapbasetf"
-  "../devel/lib/ai_robot_nav_demo/mapbasetf.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_nav_demo/mapbasetf"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_nav_demo/mapbasetf.pdb"
   "CMakeFiles/mapbasetf.dir/src/mapbasetf.cpp.o"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libmove_slow_and_clear.pdb"
-  "../../devel/lib/libmove_slow_and_clear.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libmove_slow_and_clear.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libmove_slow_and_clear.so"
   "CMakeFiles/move_slow_and_clear.dir/src/move_slow_and_clear.cpp.o"
 )
 

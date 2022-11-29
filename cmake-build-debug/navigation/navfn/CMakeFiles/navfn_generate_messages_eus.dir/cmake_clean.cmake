@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "../../devel/share/roseus/ros/navfn/manifest.l"
-  "../../devel/share/roseus/ros/navfn/srv/MakeNavPlan.l"
-  "../../devel/share/roseus/ros/navfn/srv/SetCostmap.l"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/navfn/manifest.l"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/navfn/srv/MakeNavPlan.l"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/roseus/ros/navfn/srv/SetCostmap.l"
   "CMakeFiles/navfn_generate_messages_eus"
 )
 

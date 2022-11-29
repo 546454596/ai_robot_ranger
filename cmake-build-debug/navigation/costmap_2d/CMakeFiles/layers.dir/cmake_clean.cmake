@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/liblayers.pdb"
-  "../../devel/lib/liblayers.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/liblayers.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/liblayers.so"
   "CMakeFiles/layers.dir/plugins/inflation_layer.cpp.o"
   "CMakeFiles/layers.dir/plugins/obstacle_layer.cpp.o"
   "CMakeFiles/layers.dir/plugins/static_layer.cpp.o"

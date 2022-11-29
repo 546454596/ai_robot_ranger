@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "../../devel/include/base_local_planner/BaseLocalPlannerConfig.h"
-  "../../devel/lib/python2.7/dist-packages/base_local_planner/cfg/BaseLocalPlannerConfig.py"
-  "../../devel/share/base_local_planner/docs/BaseLocalPlannerConfig-usage.dox"
-  "../../devel/share/base_local_planner/docs/BaseLocalPlannerConfig.dox"
-  "../../devel/share/base_local_planner/docs/BaseLocalPlannerConfig.wikidoc"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/base_local_planner/BaseLocalPlannerConfig.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/base_local_planner/cfg/BaseLocalPlannerConfig.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/base_local_planner/docs/BaseLocalPlannerConfig-usage.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/base_local_planner/docs/BaseLocalPlannerConfig.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/base_local_planner/docs/BaseLocalPlannerConfig.wikidoc"
   "CMakeFiles/base_local_planner_gencfg"
 )
 

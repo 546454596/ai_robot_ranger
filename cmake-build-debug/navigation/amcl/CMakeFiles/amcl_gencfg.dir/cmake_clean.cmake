@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "../../devel/include/amcl/AMCLConfig.h"
-  "../../devel/lib/python2.7/dist-packages/amcl/cfg/AMCLConfig.py"
-  "../../devel/share/amcl/docs/AMCLConfig-usage.dox"
-  "../../devel/share/amcl/docs/AMCLConfig.dox"
-  "../../devel/share/amcl/docs/AMCLConfig.wikidoc"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include/amcl/AMCLConfig.h"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/amcl/cfg/AMCLConfig.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/docs/AMCLConfig-usage.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/docs/AMCLConfig.dox"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/docs/AMCLConfig.wikidoc"
   "CMakeFiles/amcl_gencfg"
 )
 

@@ -67,7 +67,7 @@ include navigation/voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest_voxel_grid_t
 include navigation/voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest_voxel_grid_tests.dir/progress.make
 
 navigation/voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest_voxel_grid_tests:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/voxel_grid && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/voxel_grid/gtest-voxel_grid_tests.xml "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/voxel_grid/voxel_grid_tests --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/voxel_grid/gtest-voxel_grid_tests.xml"
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/voxel_grid && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/voxel_grid/gtest-voxel_grid_tests.xml "/home/cx/brainnavi/ai_robot_ranger/devel/lib/voxel_grid/voxel_grid_tests --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/voxel_grid/gtest-voxel_grid_tests.xml"
 
 run_tests_voxel_grid_gtest_voxel_grid_tests: navigation/voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest_voxel_grid_tests
 run_tests_voxel_grid_gtest_voxel_grid_tests: navigation/voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest_voxel_grid_tests.dir/build.make

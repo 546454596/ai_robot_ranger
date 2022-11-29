@@ -100,56 +100,56 @@ darknet_ros_object_detection__test_OBJECTS = \
 # External object files for target darknet_ros_object_detection-test
 darknet_ros_object_detection__test_EXTERNAL_OBJECTS =
 
-devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/test_main.cpp.o
-devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/ObjectDetection.cpp.o
-devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/build.make
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libSM.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libICE.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libX11.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libXext.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: gtest/googlemock/gtest/libgtest.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libcv_bridge.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libactionlib.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libimage_transport.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libmessage_filters.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libnodeletlib.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libbondcpp.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libuuid.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libclass_loader.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/libPocoFoundation.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libdl.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libroslib.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librospack.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libroscpp.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librosconsole.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libxmlrpcpp.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libroscpp_serialization.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librostime.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libcpp_common.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_system.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libpthread.so
-devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../devel/lib/darknet_ros/darknet_ros_object_detection-test"
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/test_main.cpp.o
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/ObjectDetection.cpp.o
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/build.make
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libSM.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libICE.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libX11.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libXext.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: gtest/googlemock/gtest/libgtest.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libcv_bridge.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libactionlib.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libimage_transport.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libmessage_filters.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libnodeletlib.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libbondcpp.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libuuid.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libclass_loader.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/libPocoFoundation.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libroslib.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librospack.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libroscpp.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librosconsole.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/librostime.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /opt/ros/melodic/lib/libcpp_common.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test: darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test"
 	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/darknet_ros/darknet_ros && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/darknet_ros_object_detection-test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/build: devel/lib/darknet_ros/darknet_ros_object_detection-test
+darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/build: /home/cx/brainnavi/ai_robot_ranger/devel/lib/darknet_ros/darknet_ros_object_detection-test
 .PHONY : darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/build
 
 darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/clean:

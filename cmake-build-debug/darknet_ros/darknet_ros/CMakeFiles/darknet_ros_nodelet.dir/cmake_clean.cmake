@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libdarknet_ros_nodelet.pdb"
-  "../../devel/lib/libdarknet_ros_nodelet.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libdarknet_ros_nodelet.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libdarknet_ros_nodelet.so"
   "CMakeFiles/darknet_ros_nodelet.dir/src/yolo_object_detector_nodelet.cpp.o"
 )
 

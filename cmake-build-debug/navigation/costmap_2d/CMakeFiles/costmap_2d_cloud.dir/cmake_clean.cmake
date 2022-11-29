@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/costmap_2d/costmap_2d_cloud"
-  "../../devel/lib/costmap_2d/costmap_2d_cloud.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/costmap_2d_cloud"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/costmap_2d/costmap_2d_cloud.pdb"
   "CMakeFiles/costmap_2d_cloud.dir/src/costmap_2d_cloud.cpp.o"
 )
 

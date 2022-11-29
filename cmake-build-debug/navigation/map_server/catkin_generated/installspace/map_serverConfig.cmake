@@ -68,7 +68,7 @@ set(map_server_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(map_server_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/navigation/map_server)
-  set(map_server_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(map_server_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(map_server_INSTALL_PREFIX "")
   set(map_server_PREFIX ${map_server_DEVEL_PREFIX})
 else()

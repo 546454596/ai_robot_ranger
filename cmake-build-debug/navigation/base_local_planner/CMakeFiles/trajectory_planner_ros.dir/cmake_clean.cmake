@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libtrajectory_planner_ros.pdb"
-  "../../devel/lib/libtrajectory_planner_ros.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libtrajectory_planner_ros.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libtrajectory_planner_ros.so"
   "CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.o"
   "CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o"
 )

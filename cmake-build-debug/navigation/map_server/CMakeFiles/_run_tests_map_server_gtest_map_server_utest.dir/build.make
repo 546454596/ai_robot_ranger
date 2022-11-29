@@ -67,7 +67,7 @@ include navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_
 include navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/progress.make
 
 navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/map_server && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/map_server/gtest-map_server_utest.xml "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/map_server/map_server_utest --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/map_server/gtest-map_server_utest.xml"
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/map_server && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/map_server/gtest-map_server_utest.xml "/home/cx/brainnavi/ai_robot_ranger/devel/lib/map_server/map_server_utest --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/map_server/gtest-map_server_utest.xml"
 
 _run_tests_map_server_gtest_map_server_utest: navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest
 _run_tests_map_server_gtest_map_server_utest: navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build.make

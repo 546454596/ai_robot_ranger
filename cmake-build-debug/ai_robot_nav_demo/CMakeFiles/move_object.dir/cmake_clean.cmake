@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../devel/lib/ai_robot_nav_demo/move_object"
-  "../devel/lib/ai_robot_nav_demo/move_object.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_nav_demo/move_object"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_nav_demo/move_object.pdb"
   "CMakeFiles/move_object.dir/src/move_object.cpp.o"
 )
 

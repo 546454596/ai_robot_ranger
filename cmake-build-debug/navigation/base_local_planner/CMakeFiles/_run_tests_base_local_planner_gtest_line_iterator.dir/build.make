@@ -67,7 +67,7 @@ include navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_g
 include navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/progress.make
 
 navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/base_local_planner && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/base_local_planner/gtest-line_iterator.xml "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/base_local_planner/line_iterator --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/base_local_planner/gtest-line_iterator.xml"
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/base_local_planner && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/base_local_planner/gtest-line_iterator.xml "/home/cx/brainnavi/ai_robot_ranger/devel/lib/base_local_planner/line_iterator --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/base_local_planner/gtest-line_iterator.xml"
 
 _run_tests_base_local_planner_gtest_line_iterator: navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator
 _run_tests_base_local_planner_gtest_line_iterator: navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/build.make

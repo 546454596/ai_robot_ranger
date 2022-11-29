@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/librotate_recovery.pdb"
-  "../../devel/lib/librotate_recovery.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/librotate_recovery.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/librotate_recovery.so"
   "CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o"
 )
 

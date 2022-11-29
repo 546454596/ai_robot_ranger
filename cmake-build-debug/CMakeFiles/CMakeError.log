@@ -1,25 +1,25 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_0e85f/fast && /usr/bin/make  -f CMakeFiles/cmTC_0e85f.dir/build.make CMakeFiles/cmTC_0e85f.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_083bc/fast && /usr/bin/make  -f CMakeFiles/cmTC_083bc.dir/build.make CMakeFiles/cmTC_083bc.dir/build
 make[1]: Entering directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0e85f.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_0e85f.dir/src.c.o -c /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_0e85f
-/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e85f.dir/link.txt --verbose=1
-/usr/bin/cc -rdynamic CMakeFiles/cmTC_0e85f.dir/src.c.o -o cmTC_0e85f 
-CMakeFiles/cmTC_0e85f.dir/src.c.o: In function `main':
+Building C object CMakeFiles/cmTC_083bc.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_083bc.dir/src.c.o -c /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_083bc
+/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_083bc.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_083bc.dir/src.c.o -o cmTC_083bc 
+CMakeFiles/cmTC_083bc.dir/src.c.o: In function `main':
 src.c:(.text+0x3e): undefined reference to `pthread_create'
 src.c:(.text+0x4a): undefined reference to `pthread_detach'
 src.c:(.text+0x56): undefined reference to `pthread_cancel'
 src.c:(.text+0x67): undefined reference to `pthread_join'
 src.c:(.text+0x7b): undefined reference to `pthread_atfork'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_0e85f.dir/build.make:98: recipe for target 'cmTC_0e85f' failed
-make[1]: *** [cmTC_0e85f] Error 1
+CMakeFiles/cmTC_083bc.dir/build.make:98: recipe for target 'cmTC_083bc' failed
+make[1]: *** [cmTC_083bc] Error 1
 make[1]: Leaving directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:127: recipe for target 'cmTC_0e85f/fast' failed
-make: *** [cmTC_0e85f/fast] Error 2
+Makefile:127: recipe for target 'cmTC_083bc/fast' failed
+make: *** [cmTC_083bc/fast] Error 2
 
 
 Source file was:
@@ -46,62 +46,62 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_8b3d3/fast && /usr/bin/make  -f CMakeFiles/cmTC_8b3d3.dir/build.make CMakeFiles/cmTC_8b3d3.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_73039/fast && /usr/bin/make  -f CMakeFiles/cmTC_73039.dir/build.make CMakeFiles/cmTC_73039.dir/build
 make[1]: Entering directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8b3d3.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_8b3d3.dir/CheckFunctionExists.c.o -c /home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/share/cmake-3.20/Modules/CheckFunctionExists.c
-Linking C executable cmTC_8b3d3
-/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b3d3.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_8b3d3.dir/CheckFunctionExists.c.o -o cmTC_8b3d3  -lpthreads 
+Building C object CMakeFiles/cmTC_73039.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_73039.dir/CheckFunctionExists.c.o -c /home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_73039
+/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73039.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_73039.dir/CheckFunctionExists.c.o -o cmTC_73039  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_8b3d3.dir/build.make:98: recipe for target 'cmTC_8b3d3' failed
-make[1]: *** [cmTC_8b3d3] Error 1
+CMakeFiles/cmTC_73039.dir/build.make:98: recipe for target 'cmTC_73039' failed
+make[1]: *** [cmTC_73039] Error 1
 make[1]: Leaving directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:127: recipe for target 'cmTC_8b3d3/fast' failed
-make: *** [cmTC_8b3d3/fast] Error 2
+Makefile:127: recipe for target 'cmTC_73039/fast' failed
+make: *** [cmTC_73039/fast] Error 2
 
 
 
 Determining if the function sgemm_ exists failed with the following output:
 Change Dir: /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_693bf/fast && /usr/bin/make  -f CMakeFiles/cmTC_693bf.dir/build.make CMakeFiles/cmTC_693bf.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_61b22/fast && /usr/bin/make  -f CMakeFiles/cmTC_61b22.dir/build.make CMakeFiles/cmTC_61b22.dir/build
 make[1]: Entering directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_693bf.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_693bf.dir/CheckFunctionExists.c.o -c /home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/share/cmake-3.20/Modules/CheckFunctionExists.c
-Linking C executable cmTC_693bf
-/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_693bf.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ -rdynamic CMakeFiles/cmTC_693bf.dir/CheckFunctionExists.c.o -o cmTC_693bf 
-CMakeFiles/cmTC_693bf.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_61b22.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_61b22.dir/CheckFunctionExists.c.o -c /home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_61b22
+/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61b22.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ -rdynamic CMakeFiles/cmTC_61b22.dir/CheckFunctionExists.c.o -o cmTC_61b22 
+CMakeFiles/cmTC_61b22.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text+0x10): undefined reference to `sgemm_'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_693bf.dir/build.make:98: recipe for target 'cmTC_693bf' failed
-make[1]: *** [cmTC_693bf] Error 1
+CMakeFiles/cmTC_61b22.dir/build.make:98: recipe for target 'cmTC_61b22' failed
+make[1]: *** [cmTC_61b22] Error 1
 make[1]: Leaving directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:127: recipe for target 'cmTC_693bf/fast' failed
-make: *** [cmTC_693bf/fast] Error 2
+Makefile:127: recipe for target 'cmTC_61b22/fast' failed
+make: *** [cmTC_61b22/fast] Error 2
 
 
 
 Determining if the function cheev_ exists failed with the following output:
 Change Dir: /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_3d5b3/fast && /usr/bin/make  -f CMakeFiles/cmTC_3d5b3.dir/build.make CMakeFiles/cmTC_3d5b3.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_76cae/fast && /usr/bin/make  -f CMakeFiles/cmTC_76cae.dir/build.make CMakeFiles/cmTC_76cae.dir/build
 make[1]: Entering directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3d5b3.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_3d5b3.dir/CheckFunctionExists.c.o -c /home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/share/cmake-3.20/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3d5b3
-/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d5b3.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ -rdynamic CMakeFiles/cmTC_3d5b3.dir/CheckFunctionExists.c.o -o cmTC_3d5b3  /usr/lib/x86_64-linux-gnu/libblas.so /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so -lpthread -lm -ldl 
-CMakeFiles/cmTC_3d5b3.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_76cae.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_76cae.dir/CheckFunctionExists.c.o -c /home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_76cae
+/home/cx/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76cae.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ -rdynamic CMakeFiles/cmTC_76cae.dir/CheckFunctionExists.c.o -o cmTC_76cae  /usr/lib/x86_64-linux-gnu/libblas.so /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so -lpthread -lm -ldl 
+CMakeFiles/cmTC_76cae.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text+0x10): undefined reference to `cheev_'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_3d5b3.dir/build.make:101: recipe for target 'cmTC_3d5b3' failed
-make[1]: *** [cmTC_3d5b3] Error 1
+CMakeFiles/cmTC_76cae.dir/build.make:101: recipe for target 'cmTC_76cae' failed
+make[1]: *** [cmTC_76cae] Error 1
 make[1]: Leaving directory '/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:127: recipe for target 'cmTC_3d5b3/fast' failed
-make: *** [cmTC_3d5b3/fast] Error 2
+Makefile:127: recipe for target 'cmTC_76cae/fast' failed
+make: *** [cmTC_76cae/fast] Error 2
 
 
 

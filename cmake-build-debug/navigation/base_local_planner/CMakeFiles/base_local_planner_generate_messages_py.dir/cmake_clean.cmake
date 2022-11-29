@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/python2.7/dist-packages/base_local_planner/msg/_Position2DInt.py"
-  "../../devel/lib/python2.7/dist-packages/base_local_planner/msg/__init__.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/base_local_planner/msg/_Position2DInt.py"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/python2.7/dist-packages/base_local_planner/msg/__init__.py"
   "CMakeFiles/base_local_planner_generate_messages_py"
 )
 

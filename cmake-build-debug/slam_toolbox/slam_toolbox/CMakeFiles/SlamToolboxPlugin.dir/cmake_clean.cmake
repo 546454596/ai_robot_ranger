@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libSlamToolboxPlugin.pdb"
-  "../../devel/lib/libSlamToolboxPlugin.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libSlamToolboxPlugin.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libSlamToolboxPlugin.so"
   "CMakeFiles/SlamToolboxPlugin_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/SlamToolboxPlugin_autogen.dir/ParseCache.txt"
   "SlamToolboxPlugin_autogen"

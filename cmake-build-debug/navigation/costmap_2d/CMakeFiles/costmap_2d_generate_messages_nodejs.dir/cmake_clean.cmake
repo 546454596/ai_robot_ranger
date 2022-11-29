@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "../../devel/share/gennodejs/ros/costmap_2d/msg/VoxelGrid.js"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/gennodejs/ros/costmap_2d/msg/VoxelGrid.js"
   "CMakeFiles/costmap_2d_generate_messages_nodejs"
 )
 

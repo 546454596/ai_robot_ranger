@@ -67,7 +67,7 @@ include navigation/navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.di
 include navigation/navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/progress.make
 
 navigation/navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn/test && ../../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/navfn/gtest-path_calc_test.xml "/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/lib/navfn/path_calc_test --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/navfn/gtest-path_calc_test.xml"
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn/test && ../../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/navfn/gtest-path_calc_test.xml "/home/cx/brainnavi/ai_robot_ranger/devel/lib/navfn/path_calc_test --gtest_output=xml:/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results/navfn/gtest-path_calc_test.xml"
 
 run_tests_navfn_gtest_path_calc_test: navigation/navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test
 run_tests_navfn_gtest_path_calc_test: navigation/navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/build.make

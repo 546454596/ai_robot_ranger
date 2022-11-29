@@ -68,7 +68,7 @@ set(navfn_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(navfn_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn)
-  set(navfn_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(navfn_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(navfn_INSTALL_PREFIX "")
   set(navfn_PREFIX ${navfn_DEVEL_PREFIX})
 else()

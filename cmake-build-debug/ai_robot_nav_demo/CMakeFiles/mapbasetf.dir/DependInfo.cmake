@@ -22,7 +22,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../ai_robot_nav_demo/include"
-  "devel/include"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/include"
   "../navigation/amcl/include"
   "../navigation/map_server/include"
   "/opt/ros/melodic/include"

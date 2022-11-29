@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/fake_localization/fake_localization"
-  "../../devel/lib/fake_localization/fake_localization.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/fake_localization/fake_localization"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/fake_localization/fake_localization.pdb"
   "CMakeFiles/fake_localization.dir/fake_localization.cpp.o"
 )
 

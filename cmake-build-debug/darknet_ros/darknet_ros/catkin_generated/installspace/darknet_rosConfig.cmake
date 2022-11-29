@@ -68,7 +68,7 @@ set(darknet_ros_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(darknet_ros_SOURCE_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet_ros)
-  set(darknet_ros_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel)
+  set(darknet_ros_DEVEL_PREFIX /home/cx/brainnavi/ai_robot_ranger/devel)
   set(darknet_ros_INSTALL_PREFIX "")
   set(darknet_ros_PREFIX ${darknet_ros_DEVEL_PREFIX})
 else()

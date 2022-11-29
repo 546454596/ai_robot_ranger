@@ -67,7 +67,7 @@ include navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/co
 include navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/progress.make
 
 navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/costmap_2d/willow-full-0.025.pgm /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/costmap_2d/test/willow-full-0.025.pgm e66b17ee374f2d7657972efcb3e2e4f7 --ignore-error
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/costmap_2d/willow-full-0.025.pgm /home/cx/brainnavi/ai_robot_ranger/devel/share/costmap_2d/test/willow-full-0.025.pgm e66b17ee374f2d7657972efcb3e2e4f7 --ignore-error
 
 costmap_2d_willow-full-0.025.pgm: navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm
 costmap_2d_willow-full-0.025.pgm: navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/build.make

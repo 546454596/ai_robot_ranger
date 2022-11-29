@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../devel/lib/ai_robot_clean/CCPP_path_point"
-  "../devel/lib/ai_robot_clean/CCPP_path_point.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_clean/CCPP_path_point"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/ai_robot_clean/CCPP_path_point.pdb"
   "CMakeFiles/CCPP_path_point.dir/src/CCPP_path_point.cpp.o"
 )
 

@@ -167,6 +167,9 @@ CAMD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcamd.so
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
+//No help, variable specified on the command line.
+CATKIN_DEVEL_PREFIX:PATH=/home/cx/brainnavi/ai_robot_ranger/devel
+
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON
 
@@ -1257,7 +1260,7 @@ ai_robot_localization_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/a
 ai_robot_msgs_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/ai_robot-master/ai_robot_msgs
 
 //The directory containing a CMake configuration file for ai_robot_msgs.
-ai_robot_msgs_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/ai_robot_msgs/cmake
+ai_robot_msgs_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/ai_robot_msgs/cmake
 
 //Value Computed by CMake
 ai_robot_msgs_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_msgs
@@ -1284,7 +1287,7 @@ ai_robot_sensors_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/ai_rob
 amcl_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl
 
 //The directory containing a CMake configuration file for amcl.
-amcl_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/amcl/cmake
+amcl_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/cmake
 
 //Value Computed by CMake
 amcl_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/navigation/amcl
@@ -1302,7 +1305,7 @@ async_slam_toolbox_LIB_DEPENDS:STATIC=general;toolbox_common;general;kartoSlamTo
 base_local_planner_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/base_local_planner
 
 //The directory containing a CMake configuration file for base_local_planner.
-base_local_planner_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/base_local_planner/cmake
+base_local_planner_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/base_local_planner/cmake
 
 //Dependencies for the target
 base_local_planner_LIB_DEPENDS:STATIC=general;costmap_2d;general;layers;general;/usr/local/lib/libboost_system.so;general;/usr/local/lib/libboost_thread.so;general;-lpthread;general;/usr/local/lib/libboost_chrono.so;general;/usr/local/lib/libboost_date_time.so;general;/usr/local/lib/libboost_atomic.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/liblaser_geometry.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;voxel_grid;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/local/lib/libboost_thread.so;general;-lpthread;general;/usr/local/lib/libboost_chrono.so;general;/usr/local/lib/libboost_system.so;general;/usr/local/lib/libboost_date_time.so;general;/usr/local/lib/libboost_atomic.so;
@@ -1338,7 +1341,7 @@ class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
 clear_costmap_recovery_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/clear_costmap_recovery
 
 //The directory containing a CMake configuration file for clear_costmap_recovery.
-clear_costmap_recovery_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/clear_costmap_recovery/cmake
+clear_costmap_recovery_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/clear_costmap_recovery/cmake
 
 //Dependencies for the target
 clear_costmap_recovery_LIB_DEPENDS:STATIC=general;costmap_2d;general;layers;general;/usr/local/lib/libboost_system.so;general;/usr/local/lib/libboost_thread.so;general;-lpthread;general;/usr/local/lib/libboost_chrono.so;general;/usr/local/lib/libboost_date_time.so;general;/usr/local/lib/libboost_atomic.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/liblaser_geometry.so;general;/opt/ros/melodic/lib/libtf.so;general;voxel_grid;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
@@ -1362,7 +1365,7 @@ compressed_image_transport_DIR:PATH=/opt/ros/melodic/share/compressed_image_tran
 costmap_2d_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/costmap_2d
 
 //The directory containing a CMake configuration file for costmap_2d.
-costmap_2d_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/costmap_2d/cmake
+costmap_2d_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/costmap_2d/cmake
 
 //Dependencies for the target
 costmap_2d_LIB_DEPENDS:STATIC=general;/usr/local/lib/libboost_system.so;general;/usr/local/lib/libboost_thread.so;general;-lpthread;general;/usr/local/lib/libboost_chrono.so;general;/usr/local/lib/libboost_date_time.so;general;/usr/local/lib/libboost_atomic.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/liblaser_geometry.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;voxel_grid;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
@@ -1389,7 +1392,7 @@ darknet_ros_lib_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libSM.so;ge
 darknet_ros_msgs_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/darknet_ros/darknet_ros_msgs
 
 //The directory containing a CMake configuration file for darknet_ros_msgs.
-darknet_ros_msgs_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/darknet_ros_msgs/cmake
+darknet_ros_msgs_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/darknet_ros_msgs/cmake
 
 //Value Computed by CMake
 darknet_ros_msgs_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet_ros_msgs
@@ -1519,7 +1522,7 @@ kartoSlamToolbox_LIB_DEPENDS:STATIC=general;/usr/local/lib/libboost_system.so;ge
 karto_sdk_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/slam_toolbox/slam_toolbox/lib/karto_sdk
 
 //The directory containing a CMake configuration file for karto_sdk.
-karto_sdk_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/karto_sdk/cmake
+karto_sdk_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/karto_sdk/cmake
 
 //Value Computed by CMake
 karto_sdk_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/slam_toolbox/slam_toolbox/lib/karto_sdk
@@ -1546,7 +1549,7 @@ map_msgs_DIR:PATH=/opt/ros/melodic/share/map_msgs/cmake
 map_server_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/map_server
 
 //The directory containing a CMake configuration file for map_server.
-map_server_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/map_server/cmake
+map_server_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/map_server/cmake
 
 //Value Computed by CMake
 map_server_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/navigation/map_server
@@ -1570,7 +1573,7 @@ message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 move_base_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/move_base
 
 //The directory containing a CMake configuration file for move_base.
-move_base_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/move_base/cmake
+move_base_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/move_base/cmake
 
 //Dependencies for the target
 move_base_LIB_DEPENDS:STATIC=general;base_local_planner;general;trajectory_planner_ros;general;clear_costmap_recovery;general;navfn;general;rotate_recovery;general;costmap_2d;general;layers;general;/usr/local/lib/libboost_system.so;general;/usr/local/lib/libboost_thread.so;general;-lpthread;general;/usr/local/lib/libboost_chrono.so;general;/usr/local/lib/libboost_date_time.so;general;/usr/local/lib/libboost_atomic.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/liblaser_geometry.so;general;/opt/ros/melodic/lib/libtf.so;general;voxel_grid;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
@@ -1594,7 +1597,7 @@ move_slow_and_clear_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/nav
 nav_core_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/nav_core
 
 //The directory containing a CMake configuration file for nav_core.
-nav_core_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/nav_core/cmake
+nav_core_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/nav_core/cmake
 
 //Value Computed by CMake
 nav_core_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/navigation/nav_core
@@ -1606,7 +1609,7 @@ nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
 navfn_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/navfn
 
 //The directory containing a CMake configuration file for navfn.
-navfn_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/navfn/cmake
+navfn_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/navfn/cmake
 
 //Dependencies for the target
 navfn_LIB_DEPENDS:STATIC=general;costmap_2d;general;layers;general;/usr/local/lib/libboost_system.so;general;/usr/local/lib/libboost_thread.so;general;-lpthread;general;/usr/local/lib/libboost_chrono.so;general;/usr/local/lib/libboost_date_time.so;general;/usr/local/lib/libboost_atomic.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/liblaser_geometry.so;general;/opt/ros/melodic/lib/libtf.so;general;voxel_grid;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
@@ -1732,7 +1735,7 @@ rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 rotate_recovery_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/rotate_recovery
 
 //The directory containing a CMake configuration file for rotate_recovery.
-rotate_recovery_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/rotate_recovery/cmake
+rotate_recovery_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/rotate_recovery/cmake
 
 //Dependencies for the target
 rotate_recovery_LIB_DEPENDS:STATIC=general;base_local_planner;general;trajectory_planner_ros;general;costmap_2d;general;layers;general;/usr/local/lib/libboost_system.so;general;/usr/local/lib/libboost_thread.so;general;-lpthread;general;/usr/local/lib/libboost_chrono.so;general;/usr/local/lib/libboost_date_time.so;general;/usr/local/lib/libboost_atomic.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/liblaser_geometry.so;general;/opt/ros/melodic/lib/libtf.so;general;voxel_grid;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
@@ -1756,7 +1759,7 @@ slam_toolbox_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/slam_toolb
 slam_toolbox_msgs_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/slam_toolbox/slam_toolbox_msgs
 
 //The directory containing a CMake configuration file for slam_toolbox_msgs.
-slam_toolbox_msgs_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/slam_toolbox_msgs/cmake
+slam_toolbox_msgs_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/slam_toolbox_msgs/cmake
 
 //Value Computed by CMake
 slam_toolbox_msgs_SOURCE_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/slam_toolbox/slam_toolbox_msgs
@@ -1822,7 +1825,7 @@ visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
 voxel_grid_BINARY_DIR:STATIC=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/voxel_grid
 
 //The directory containing a CMake configuration file for voxel_grid.
-voxel_grid_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/voxel_grid/cmake
+voxel_grid_DIR:PATH=/home/cx/brainnavi/ai_robot_ranger/devel/share/voxel_grid/cmake
 
 //Dependencies for the target
 voxel_grid_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
@@ -1931,7 +1934,7 @@ Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
 Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
-CATKIN_ENV:INTERNAL=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/catkin_generated/env_cached.sh
+CATKIN_ENV:INTERNAL=
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/test_results
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
@@ -2059,7 +2062,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=35
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

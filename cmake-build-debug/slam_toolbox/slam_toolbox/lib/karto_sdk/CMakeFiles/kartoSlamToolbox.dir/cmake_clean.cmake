@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../../devel/lib/libkartoSlamToolbox.pdb"
-  "../../../../devel/lib/libkartoSlamToolbox.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libkartoSlamToolbox.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libkartoSlamToolbox.so"
   "CMakeFiles/kartoSlamToolbox.dir/src/Karto.cpp.o"
   "CMakeFiles/kartoSlamToolbox.dir/src/Mapper.cpp.o"
 )

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libnavfn.pdb"
-  "../../devel/lib/libnavfn.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libnavfn.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libnavfn.so"
   "CMakeFiles/navfn.dir/src/navfn.cpp.o"
   "CMakeFiles/navfn.dir/src/navfn_ros.cpp.o"
 )

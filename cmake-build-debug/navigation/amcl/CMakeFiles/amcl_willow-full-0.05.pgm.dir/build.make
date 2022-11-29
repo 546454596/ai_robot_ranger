@@ -67,7 +67,7 @@ include navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/compiler_depend
 include navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/progress.make
 
 navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/willow-full-0.05.pgm /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/amcl/test/willow-full-0.05.pgm b61694296e08965096c5e78611fd9765 --ignore-error
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/willow-full-0.05.pgm /home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/test/willow-full-0.05.pgm b61694296e08965096c5e78611fd9765 --ignore-error
 
 amcl_willow-full-0.05.pgm: navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm
 amcl_willow-full-0.05.pgm: navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/build.make

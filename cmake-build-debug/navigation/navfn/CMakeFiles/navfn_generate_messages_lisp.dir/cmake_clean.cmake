@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/share/common-lisp/ros/navfn/srv/MakeNavPlan.lisp"
-  "../../devel/share/common-lisp/ros/navfn/srv/SetCostmap.lisp"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/common-lisp/ros/navfn/srv/MakeNavPlan.lisp"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/share/common-lisp/ros/navfn/srv/SetCostmap.lisp"
   "CMakeFiles/navfn_generate_messages_lisp"
 )
 

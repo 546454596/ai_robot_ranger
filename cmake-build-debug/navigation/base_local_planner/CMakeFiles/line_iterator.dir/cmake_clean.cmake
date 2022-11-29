@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/base_local_planner/line_iterator"
-  "../../devel/lib/base_local_planner/line_iterator.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/base_local_planner/line_iterator"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/base_local_planner/line_iterator.pdb"
   "CMakeFiles/line_iterator.dir/test/line_iterator_test.cpp.o"
 )
 

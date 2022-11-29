@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/slam_toolbox/localization_slam_toolbox_node"
-  "../../devel/lib/slam_toolbox/localization_slam_toolbox_node.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/slam_toolbox/localization_slam_toolbox_node"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/slam_toolbox/localization_slam_toolbox_node.pdb"
   "CMakeFiles/localization_slam_toolbox_node_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/localization_slam_toolbox_node_autogen.dir/ParseCache.txt"
   "localization_slam_toolbox_node_autogen"

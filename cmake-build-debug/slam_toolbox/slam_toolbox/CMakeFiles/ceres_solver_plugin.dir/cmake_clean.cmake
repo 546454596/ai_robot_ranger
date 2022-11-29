@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../devel/lib/libceres_solver_plugin.pdb"
-  "../../devel/lib/libceres_solver_plugin.so"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libceres_solver_plugin.pdb"
+  "/home/cx/brainnavi/ai_robot_ranger/devel/lib/libceres_solver_plugin.so"
   "CMakeFiles/ceres_solver_plugin_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/ceres_solver_plugin_autogen.dir/ParseCache.txt"
   "ceres_solver_plugin_autogen"

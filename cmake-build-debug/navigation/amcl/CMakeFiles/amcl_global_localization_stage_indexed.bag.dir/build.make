@@ -67,7 +67,7 @@ include navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.di
 include navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/progress.make
 
 navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag:
-	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/global_localization_stage_indexed.bag /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/devel/share/amcl/test/global_localization_stage_indexed.bag 752f711cf4f6e8d1d660675e2da096b0 --ignore-error
+	cd /home/cx/brainnavi/ai_robot_ranger/src/cmake-build-debug/navigation/amcl && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/download_checkmd5.py http://download.ros.org/data/amcl/global_localization_stage_indexed.bag /home/cx/brainnavi/ai_robot_ranger/devel/share/amcl/test/global_localization_stage_indexed.bag 752f711cf4f6e8d1d660675e2da096b0 --ignore-error
 
 amcl_global_localization_stage_indexed.bag: navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag
 amcl_global_localization_stage_indexed.bag: navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/build.make
