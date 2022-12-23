@@ -49,6 +49,7 @@
 #define FINDPATH_TASK 4
 #define POINTTOPOINT_TASK 5
 #define FAR_POINTTOPOINT_TASK 6
+#define STOP_TASK 7
 
 class AIBrain
 {
@@ -108,6 +109,9 @@ private:
 
     //subscriber for controller
     ros::Subscriber joy_sub;
+    ros::Subscriber joy_sub2;
+    ros::Subscriber stop_task_;
+	ros::Publisher obs_abort_;
     /*
     ros::Subscriber btn1_sub;  //default for takeoff
     ros::Subscriber btn2_sub;  //for find path
@@ -132,10 +136,12 @@ private:
     ros::Subscriber qtSlamWorld;
     //subscriber for destination topic from rviz
     ros::Subscriber move_base_goal_sub;
+    ros::Subscriber move_base_goal_sub2;
     //subscriber for point to point
     ros::Subscriber ptop_sub;
     //subscriber for far point to point
     ros::Subscriber farptop_sub;
+    ros::Subscriber farptop_sub2;
     //subscriber for slam pose
     ros::Subscriber slampose_sub;
 
@@ -154,7 +160,7 @@ private:
     void findpath(double _dt);
     void pointToPointTASK(double _dt);
     void farPointToPointTASK(double _dt);
-
+    //void remoteStopTask(double _dt);
     void givePosToFindpath();
 
     //call back for subscriber for controller
@@ -184,6 +190,9 @@ private:
     void btn5Callback(const std_msgs::Bool::ConstPtr &_msg);
     //one topic for all joystick input
     void joyCallback(const sensor_msgs::Joy::ConstPtr &msg);
+    void joyCallback2(const sensor_msgs::Joy::ConstPtr &msg);
+    void stopCallback(const std_msgs::String::ConstPtr &_msg);
+	void obsAbort();
 
     //set destination service call back
     bool setdestinationCallback(ai_robot_msgs::set_destination::Request &req, ai_robot_msgs::set_destination::Response &res);

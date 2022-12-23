@@ -19,6 +19,9 @@
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/Pose.h>
 #include "assistMath.h"
+#include <geometry_msgs/PoseStamped.h>
+#include <nav_msgs/Path.h>
+#include <vector>
 
 using namespace std;
 
@@ -48,8 +51,8 @@ private:
 class FindPathSRM
 {
 public:
-    FindPathSRM(ros::NodeHandle &_n, float _startx, float _starty, float _startz,
-                float _endx, float _endy, float _endz, bool _isview);
+//    FindPathSRM(ros::NodeHandle &_n, float _startx, float _starty, float _startz,
+//                float _endx, float _endy, float _endz, bool _isview);
     FindPathSRM(ros::NodeHandle &_n, bool _isview);
     ~FindPathSRM();
 
@@ -73,6 +76,7 @@ private:
     ros::NodeHandle nh;
     ros::Subscriber restart_sub, reloadmap_sub;
     ros::Publisher targetP_pub;
+    ros::Publisher targetPW_pub;
 
     //the start and end position
     pcl::PointXYZRGB startP, endP;
@@ -168,11 +172,13 @@ private:
 
     //for test
     //show node
-    void testShowNode();
+//    void testShowNode();
     //show queue
     void testShowQueue(vector<int> &vec);
-
-    //pub target point for obstacle avoid
+    //pub target point for obstacle avoid in world frame
+    void pubTargetPW();
+    std::vector<geometry_msgs::PoseStamped> global_path;
+    //pub target point for obstacle avoid in body frame
     void pubTargetP();
 };
 

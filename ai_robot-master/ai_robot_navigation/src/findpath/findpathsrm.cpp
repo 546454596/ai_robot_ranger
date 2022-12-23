@@ -6,29 +6,24 @@ const unibn::OctreeParams& mapOctParams = unibn::OctreeParams(30, false, 0.02f);
 
 
 PathNode::PathNode(float _x, float _y, float _z, int _id):
-    x(_x),y(_y),z(_z),id_self(_id), id_fromWhere(-1), isDealed(false),
-    distTilNow(-1), distToEnd(-1), distTotal(-1)
+    x(_x),y(_y),z(_z),id_self(_id), id_fromWhere(-1), isDealed(false), distTilNow(-1), distToEnd(-1), distTotal(-1)
 {}
 
-PathNode::~PathNode()
-{}
+PathNode::~PathNode(){}
 
-void PathNode::setxyzid(float _x, float _y, float _z, int _id)
-{
+void PathNode::setxyzid(float _x, float _y, float _z, int _id){
     x = _x;
     y = _y;
     z = _z;
     id_self = _id;
 }
 
-void PathNode::addLink(int _id_link, float _dist)
-{
+void PathNode::addLink(int _id_link, float _dist){
     id_link.push_back(_id_link);
     dist_link.push_back(_dist);
 }
 
-void PathNode::removeLink(int _id_link)
-{
+void PathNode::removeLink(int _id_link){
     for(int i=0; i<id_link.size(); ++i){
         if(id_link[i] == _id_link){
             id_link.erase(id_link.begin()+i);
@@ -37,7 +32,7 @@ void PathNode::removeLink(int _id_link)
     }
 }
 
-FindPathSRM::FindPathSRM(ros::NodeHandle &_n, float _startx, float _starty, float _startz,
+/*FindPathSRM::FindPathSRM(ros::NodeHandle &_n, float _startx, float _starty, float _startz,
                          float _endx, float _endy, float _endz, bool _isview):
     nh(_n),
     isAllFileExit(false),
@@ -78,18 +73,13 @@ FindPathSRM::FindPathSRM(ros::NodeHandle &_n, float _startx, float _starty, floa
     initService();
 //    mapOct.initialize(mapPC->points, mapOctParams);
     //keyPosOct.initialize(keyPosPC->points, keyPosOctParams);
-}
+}*/
 
 FindPathSRM::FindPathSRM(ros::NodeHandle &_n, bool _isview):
-    nh(_n),
-    isAllFileExit(false),
-    startP(0,0,0), endP(0, 0, 0), id_startNode(-1), id_endNode(-1), isview(_isview),
-    mappointSparse(5.0), isDealView(0), isNewTar(0), isFirstView(1),
-    idp_targetNode(0), Rwc{1,0,0,0,1,0,0,0,1}, justReplan(0),
-    ksegnow(0), kseg(0),
-    astartdist(0.5), bstartdist(0.05), aenddist(1.5), benddist(0.05), aobsdist(1), bobsdist(2),
-    keyPosPC(new pcl::PointCloud<pcl::PointXYZRGB>),
-    mapPC(new pcl::PointCloud<pcl::PointXYZRGB>)
+    nh(_n), isAllFileExit(false), startP(0,0,0), endP(0, 0, 0), id_startNode(-1), id_endNode(-1), isview(_isview),
+    mappointSparse(5.0), isDealView(0), isNewTar(0), isFirstView(1), idp_targetNode(0), Rwc{1,0,0,0,1,0,0,0,1}, justReplan(0),
+    ksegnow(0), kseg(0), astartdist(0.5), bstartdist(0.05), aenddist(1.5), benddist(0.05), aobsdist(1), bobsdist(2),
+    keyPosPC(new pcl::PointCloud<pcl::PointXYZRGB>), mapPC(new pcl::PointCloud<pcl::PointXYZRGB>)
 {
     nh.getParam("logfile", _logfile);
     nh.getParam("denKeyfPos", _denKeyfPos);
@@ -123,7 +113,8 @@ void FindPathSRM::initService() //this demo does not load the /topo/savedone top
 {
     reloadmap_sub = nh.subscribe("/topo/savedone", 1, &FindPathSRM::reloadCB, this);
     restart_sub = nh.subscribe("/ai_robot/restart_nav", 1, &FindPathSRM::restartNavCallback, this);//from obsavoid node, 重新启动nav
-    targetP_pub = nh.advertise<geometry_msgs::Pose>("/ai_robot/findpath/targetP",1); // 输出局部目的地，发送给obsavoid node
+    targetP_pub = nh.advertise<geometry_msgs::Pose>("/ai_robot/findpath/targetP",1); // 输出body frame下的局部目的地，发送给obsavoid node
+    targetPW_pub = nh.advertise<nav_msgs::Path>("/topo/path", 1);
 }
 
 double FindPathSRM::getShortestPathLength()
@@ -131,8 +122,7 @@ double FindPathSRM::getShortestPathLength()
     return pNode[id_endNode].distTilNow;
 }
 
-bool FindPathSRM::findPath()
-{
+bool FindPathSRM::findPath(){
     if(!isAllFileExit)
     {
         cout << "[FINDPATH]some files are not exits" <<endl;
@@ -145,14 +135,11 @@ bool FindPathSRM::findPath()
     {
         end1 = cv::getTickCount();
         double _t = 1000*double(end1 - start1)/cv::getTickFrequency();
-        // cout << "search start end node time:" << _t <<" ms."<< endl;
         start1 = end1;
         mylog << _t << " ";
-        // mylog << "-----start new find path task-----" <<endl;
         if(!astar<unibn::L2Distance<pcl::PointXYZRGB>>()){ //启动A*路径规划
             mylog << 0 << endl;
-            // fail to find path
-            return 0;
+            return 0;// fail to find path
         }
     }
     else
@@ -287,7 +274,6 @@ if(isAllFileExit)
     }
     viewer->removeShape("velline", v1);
     viewer->addLine(nowP, nowvelP, 30, 0, 100, "velline", v1);
-
     //while(isview)
     {
         viewer->spinOnce (1);
@@ -295,8 +281,7 @@ if(isAllFileExit)
 }
 }
 
-void FindPathSRM::resetAll(float _startx, float _starty, float _startz,
-                           float _endx, float _endy, float _endz)
+void FindPathSRM::resetAll(float _startx, float _starty, float _startz, float _endx, float _endy, float _endz)
 {
     startP.x = _startx;
     startP.y = _starty;
@@ -313,7 +298,6 @@ void FindPathSRM::resetAll(float _startx, float _starty, float _startz,
     id_endNode = -1;
     id_startNode = -1;
     pathid_near_node = 0;
-
     if(isAllFileExit)
     {
         pNode[pNode.size()-1].x = _endx;
@@ -321,7 +305,7 @@ void FindPathSRM::resetAll(float _startx, float _starty, float _startz,
         pNode[pNode.size()-1].z = _endz;
         pNode[pNode.size()-2].x = _startx;
         pNode[pNode.size()-2].y = _starty;
-        pNode[pNode.size()-2].z = _startz;
+        pNode[pNode.size()-2].z = _startz;//pnode为Pathnode,拓扑路径上的节点+2个节点，分别为目的地和起点
         path.clear();
         path_point.clear();
     if(isDealView)
@@ -338,9 +322,8 @@ void FindPathSRM::resetAll(float _startx, float _starty, float _startz,
     }
     }
 }
-
-bool FindPathSRM::getTargetSpeed(float _nowx, float _nowy, float _nowz, float _nowyaw,
-                     float &vx, float &vy, float &vz, float &vyaw)
+//slam下机器人当前位置_nowx/y/z,欧拉角差值
+bool FindPathSRM::getTargetSpeed(float _nowx, float _nowy, float _nowz, float _nowyaw, float &vx, float &vy, float &vz, float &vyaw)
 {
     int64_t start1=0,end1=0;
     start1 = cv::getTickCount();
@@ -354,15 +337,12 @@ bool FindPathSRM::getTargetSpeed(float _nowx, float _nowy, float _nowz, float _n
     velXYZ_now[0] = vx;
     velXYZ_now[1] = vy;
     velXYZ_now[2] = vz;
-    float _dist = sqrt(pow(_nowx-path_point[idp_targetNode].x, 2) +
-                       pow(_nowy-path_point[idp_targetNode].y, 2));// +pow(_nowz-path_point[idp_targetNode].z, 2)
+    float _dist = sqrt(pow(_nowx - path_point[idp_targetNode].x, 2) + pow(_nowy - path_point[idp_targetNode].y, 2));// +pow(_nowz-path_point[idp_targetNode].z, 2)
     float yaw_tar;
     //update which node drone is in
     if(pathid_near_node>1){
-        float nodedist = (pow(_nowx-path_point[pathid_near_node].x, 2) +
-                pow(_nowy-path_point[pathid_near_node].y, 2));// + pow(_nowz-path_point[pathid_near_node].z, 2)
-        float nextnodedist = (pow(_nowx-path_point[pathid_near_node-1].x, 2) +
-                pow(_nowy-path_point[pathid_near_node-1].y, 2));// + pow(_nowz-path_point[pathid_near_node-1].z, 2)
+        float nodedist = (pow(_nowx-path_point[pathid_near_node].x, 2) + pow(_nowy-path_point[pathid_near_node].y, 2));// + pow(_nowz-path_point[pathid_near_node].z, 2)
+        float nextnodedist = (pow(_nowx-path_point[pathid_near_node-1].x, 2) + pow(_nowy-path_point[pathid_near_node-1].y, 2));// + pow(_nowz-path_point[pathid_near_node-1].z, 2)
         if(nextnodedist < nodedist){
             --pathid_near_node;
         }
@@ -413,8 +393,7 @@ bool FindPathSRM::getTargetSpeed(float _nowx, float _nowy, float _nowz, float _n
             tar.x = (path_point[idp_targetNode].x*ksegnow + path_point[idp_targetNode+1].x*(kseg-ksegnow)) / kseg;
             tar.y = (path_point[idp_targetNode].y*ksegnow + path_point[idp_targetNode+1].y*(kseg-ksegnow)) / kseg;
             tar.z = (path_point[idp_targetNode].z*ksegnow + path_point[idp_targetNode+1].z*(kseg-ksegnow)) / kseg;
-            _dist = sqrt(pow(_nowx-tar.x, 2) +
-                       pow(_nowy-tar.y, 2));// + pow(_nowz-tar.z, 2)
+            _dist = sqrt(pow(_nowx-tar.x, 2) + pow(_nowy-tar.y, 2));// + pow(_nowz-tar.z, 2)
             //if blocked, back to former point|| ksegnow > (kseg)
             if(_dist > 3  || mapOct.isBlock<unibn::L2Distance<pcl::PointXYZRGB> >(tmp, tar, 1.2*mappointSparse))
             {
@@ -426,15 +405,14 @@ bool FindPathSRM::getTargetSpeed(float _nowx, float _nowy, float _nowz, float _n
             }
             mylog << "to:" << tar.x <<","<< tar.y <<","<< tar.z << "---ksegnow:"<< ksegnow <<endl;
         }
-        calDPotantial2(_nowx, _nowy, _nowz, tar.x, tar.y, tar.z, vx, vy, vz);
-        calYaw(vx, vy, vz, yaw_tar);
-        vyaw = calYawSpeed(yaw_tar, _nowyaw);
+        calDPotantial2(_nowx, _nowy, _nowz, tar.x, tar.y, tar.z, vx, vy, vz);//根据当前和目标点计算出速度
+        calYaw(vx, vy, vz, yaw_tar);//根据速度计算朝向角
+        vyaw = calYawSpeed(yaw_tar, _nowyaw);//计算目标与起点之间的角度差
         nowtarP.x = tar.x;
         nowtarP.y = tar.y;
         nowtarP.z = tar.z;
         isNewTar = true;
     }
-
     end1 = cv::getTickCount();
     double _ti = 1000*double(end1 - start1)/cv::getTickFrequency();
     pubTargetP();
@@ -461,23 +439,45 @@ bool FindPathSRM::getTargetSpeed(float _nowx, float _nowy, float _nowz, float _n
     return true;
 }
 
+void FindPathSRM::pubTargetPW() {
+    //publish target pose in world frame
+    nav_msgs::Path path_msg;
+    path_msg.poses.clear();
+    path_msg.poses.resize(path_point.size());
+    path_msg.header.frame_id = "map";
+    path_msg.header.stamp = ros::Time::now();
+    float twc[3] = {nowP.x, nowP.y, nowP.z};
+    float taryawp_fromworld[3], _q[4];
+    for(int i=0; i<=path_point.size()-1; ++i)
+    {
+        path_msg.poses[i].pose.position.x = path_point[i].x;
+        path_msg.poses[i].pose.position.y = path_point[i].y;
+        path_msg.poses[i].pose.position.z = path_point[i].z;
+        float tardir[3] = {path_point[path_point.size()-1].x, path_point[path_point.size()-1].y, path_point[path_point.size()-1].z};
+        float tar_yaw_in_world = atan2(tardir[1]-nowtarP.y, tardir[0]-nowtarP.y);
+        eulerToQ(0, 0, tar_yaw_in_world, _q);
+        path_msg.poses[i].pose.orientation.w = 1;
+        path_msg.poses[i].pose.orientation.x = 0;
+        path_msg.poses[i].pose.orientation.y = 0;
+        path_msg.poses[i].pose.orientation.z = 0;
+        std::cout << path_msg.poses[i].pose.position.x << std::endl;
+    }
+    targetPW_pub.publish(path_msg);
+}
+
 void FindPathSRM::pubTargetP(){
     //publish target pose in body frame
     geometry_msgs::Pose tarp_msg;
     float twc[3]={nowP.x,nowP.y,nowP.z}, tarp_frombody[3];
     //float rrwc[9]={Rwc[0],-Rwc[1],0, -Rwc[3],Rwc[4],0, 0,0,1};
     transform_body_from_NWUworld(tarp_frombody[0], tarp_frombody[1], tarp_frombody[2],
-            nowtarP.x,nowtarP.y,nowtarP.z, Rwc, twc);
-    //cout<<".........."<<nowtarP.x<<","<<nowtarP.y<<","<<nowtarP.z<<endl;
-    //cout<<"[fp]rt:"<<twc[0]<<","<<twc[1]<<","<<twc[2]<<"; "<<Rwc[0]<<","<<Rwc[1]
-    //   <<","<<Rwc[3]<<","<<Rwc[4]<<endl;
-    //cout<<"local target:"<<tarp_frombody[0]<<","<<tarp_frombody[1]<<","<<tarp_frombody[2]<<endl;
+            nowtarP.x,nowtarP.y,nowtarP.z, Rwc, twc);//将map下机器人目标转换到body下
     tarp_msg.position.x = tarp_frombody[0];
     tarp_msg.position.y = tarp_frombody[1];
     tarp_msg.position.z = tarp_frombody[2];
     float taryawp_frombody[3], _q[4], tardir[3] = {path_point[idp_targetNode].x,path_point[idp_targetNode].y,path_point[idp_targetNode].z};
     transform_body_from_NWUworld(taryawp_frombody[0], taryawp_frombody[1], taryawp_frombody[2],
-            tardir[0], tardir[1], tardir[2], Rwc, twc);
+            tardir[0], tardir[1], tardir[2], Rwc, twc);//将map下 **转换到body下
     float tar_yaw = atan2(taryawp_frombody[1]-tarp_frombody[1], taryawp_frombody[0]-tarp_frombody[0]);
     eulerToQ(0,0, tar_yaw, _q);
     //cout<<"taryaw in bodyframe is "<<tar_yaw<<endl;
@@ -510,44 +510,33 @@ bool cmp_by_value(const PAIR& lhs, const PAIR& rhs) {
     return lhs.second < rhs.second;
 }
 
-void FindPathSRM::calDPotantial2(float _nowx, float _nowy, float _nowz,
-                    float _tarx, float _tary, float _tarz,
+void FindPathSRM::calDPotantial2(float _nowx, float _nowy, float _nowz, float _tarx, float _tary, float _tarz,
                     float &vx, float &vy, float &vz)
 {
     float _dx = _tarx - _nowx;
     float _dy = _tary - _nowy;
     float _dL = sqrt(pow(_dx,2) + pow(_dy,2));
     float vtar;
-    if(_dL > 2)
-    {
+    if(_dL > 2){
         vtar = 0.5;
-    }
-    else
-    {
+    }else{
         vtar = _dL / 4;
     }
     float _vo = vtar / _dL;
     vx = _vo * _dx;
     vy = _vo * _dy;
-    //_dz = _tarz - _nowz;
-    if(_dx > 0)
-    {
+    if(_dx > 0){
         vx = fabs(vx);
     }
-    else
-    {
+    else{
         vx = -fabs(vx);
     }
-
-    if(_dy > 0)
-    {
+    if(_dy > 0){
         vy = fabs(vy);
     }
-    else
-    {
+    else{
         vy = -fabs(vy);
     }
-
     float _dz = _tarz - _nowz;
     if(fabs(_dz) > 0.3)
     {
@@ -559,31 +548,25 @@ void FindPathSRM::calDPotantial2(float _nowx, float _nowy, float _nowz,
     }
 }
 
-void FindPathSRM::calYaw(float vx, float vy, float vz, float &yaw)
-{
+void FindPathSRM::calYaw(float vx, float vy, float vz, float &yaw){
     float L = sqrt(pow(vx,2) + pow(vy,2));
-    if(vy > 0)
-    {
+    if(vy > 0){
         yaw = acos(vx / L);
     }
-    else
-    {
+    else{
         yaw = -acos(vx / L);
     }
 }
 
-float FindPathSRM::calYawSpeed(float yaw_tar, float yaw_now)
-{
+float FindPathSRM::calYawSpeed(float yaw_tar, float yaw_now){
     float yErr = yaw_tar - yaw_now;
-    if(yErr > 3.1415)
-    {
+    if(yErr > 3.1415){
         yErr -= 2*3.1415;
     }
     else if(yErr < -3.1415)
     {
         yErr += 2*3.1415;
     }
-
     return yErr;
 }
 
@@ -606,7 +589,7 @@ bool FindPathSRM::reconstructGraph()
         return false;
     }
 }
-
+//读取拓扑节点
 bool FindPathSRM::readPoint()
 {
 //    cout<< "_denKeyfPos"<<_denKeyfPos;
@@ -635,23 +618,15 @@ bool FindPathSRM::readPoint()
         pt.r = 0;
         pt.g = 0;
         pt.b = 255;
-
         keyPosPC->push_back(pt);
-
         pn.setxyzid(pt.x, pt.y, pt.z, i);
         pNode.push_back(pn);
         ++i;
     }
     pNode.push_back(pn);
     pNode.push_back(pn);  //add two to the last for destination and start position
-
-    std::cout << "read key pos----->" << std::endl
-//              << "  x range (" << minx << "," << maxx << ")" << std::endl
-//              << "  y range (" << miny << "," << maxy << ")" << std::endl
-//              << "  z range (" << minz << "," << maxz << ")" << std::endl
-              << "  total " << keyPosPC->size() << " key pos." << endl;
+    std::cout << "read key pos----->" << std::endl << "  total " << keyPosPC->size() << " key pos." << endl;
     in.close();
-
     return true;
 }
 
@@ -667,7 +642,6 @@ bool FindPathSRM::readLink()
     int i,j;
     vector<int> tmp(2);
     float distmp;
-
     while (!in.eof())
     {
         std::getline(in, line);
@@ -680,20 +654,13 @@ bool FindPathSRM::readLink()
         tmp[0] = i;
         tmp[1] = j;
         keyPosLink.push_back(tmp);
-        distmp = unibn::L2Distance<pcl::PointXYZRGB>::sqrt(
-                    unibn::L2Distance<pcl::PointXYZRGB>::compute(
+        distmp = unibn::L2Distance<pcl::PointXYZRGB>::sqrt(unibn::L2Distance<pcl::PointXYZRGB>::compute(
                         keyPosPC->points[i],keyPosPC->points[j]));//计算两拓扑节点之间的欧式距离
-                /*sqrt(pow((keyPosPC->points[i].x-keyPosPC->points[j].x),2)
-                    + pow((keyPosPC->points[i].y-keyPosPC->points[j].y),2)
-                    + pow((keyPosPC->points[i].z-keyPosPC->points[j].z),2));*/
-
         pNode[i].addLink(j, distmp);
         pNode[j].addLink(i, distmp);//构建无向图
     }
-    cout << "read link------>" << endl
-         << "  total " << keyPosLink.size() << " link." << endl;
+    cout << "read link------>" << endl << "  total " << keyPosLink.size() << " link." << endl;
     in.close();
-
     return true;
 }
 
@@ -721,12 +688,9 @@ bool FindPathSRM::readMapPoint()
         pt.r = 255;
         pt.g = 0;
         pt.b = 0;
-
         mapPC->push_back(pt);
     }
-
-    std::cout << "read map points----->" << std::endl
-              << "  total " << mapPC->size() << " map points." << endl;
+    std::cout << "read map points----->" << std::endl << "  total " << mapPC->size() << " map points." << endl;
     in.close();
     return true;
 }
@@ -736,11 +700,9 @@ bool FindPathSRM::readParams()
     cv::FileStorage fs(_aParamForKeyframeHandle, cv::FileStorage::READ);
     if(!fs.isOpened())
     {
-        cout << "can not find parameter file aParamForKeyframeHandle.yaml" << endl
-             << "default parameters are used!" << endl;
+        cout << "can not find parameter file aParamForKeyframeHandle.yaml" << endl << "default parameters are used!" << endl;
         return false;
     }
-
     fs["mappointSparse"] >> mappointSparse;
     fs["astartdist"] >> astartdist;
     fs["bstartdist"] >> bstartdist;
@@ -786,8 +748,7 @@ void FindPathSRM::setstring(string &str, int k)
 }
 
 template <typename Distance>//泛型编程，Distance是函数所使用的数据类型的占位符名称。这个名称在函数定义中使用。
-bool FindPathSRM::findStartEndNode()
-{
+bool FindPathSRM::findStartEndNode(){
     float mindistS = 10000, mindistE = 10000, tmpdist;
     for(int i=0; i<keyPosPC->size(); ++i)
     {
@@ -814,77 +775,48 @@ bool FindPathSRM::findStartEndNode()
 }
 
 template <typename Distance>
-bool FindPathSRM::astar()
-{
+bool FindPathSRM::astar(){
     vector<int> nodeQueue;
     //first node
-    pNode[id_startNode].id_fromWhere = id_startNode;
+    pNode[id_startNode].id_fromWhere = id_startNode;//将距离起点最近的节点序号赋值给...
     pNode[id_startNode].distTilNow = 0;
-    pNode[id_startNode].distToEnd = Distance::sqrt(
-                Distance::compute(
-                    keyPosPC->points[id_startNode], keyPosPC->points[id_endNode]));
-    pNode[id_startNode].distTotal = pNode[id_startNode].distTilNow +
-            pNode[id_startNode].distToEnd;
-    pNode[id_startNode].isDealed = true;
-    nodeQueue.push_back(id_startNode);
-
+    pNode[id_startNode].distToEnd = Distance::sqrt(Distance::compute(keyPosPC->points[id_startNode], keyPosPC->points[id_endNode]));//起止节点间距离
+    pNode[id_startNode].distTotal = pNode[id_startNode].distTilNow + pNode[id_startNode].distToEnd;//距离起点+距离终点的代价
+    pNode[id_startNode].isDealed = true;//表示节点已被处理
+    nodeQueue.push_back(id_startNode);//队列存放已被处理的节点
     int id_now, id_next, dealtime=0;
     float dtn_tmp;
     bool valid_path = false;
-    while(!nodeQueue.empty())
-    {
-        if((++dealtime)>2000)
-        {
+    while(!nodeQueue.empty()){
+        if((++dealtime)>2000){
             cout << "Path not found" << endl;
             break;
         }
-
         id_now = nodeQueue[nodeQueue.size()-1];
-
-        if(id_now == id_endNode)
+        if(id_now == id_endNode)//判断是否到达终点
         {
-//            while(id_now != id_startNode)
-//            {
-//                path.push_back(id_now);
-//                id_now = pNode[id_now].id_fromWhere;
-//            }
-//            path.push_back(id_startNode);
-//            cout << "Find path done!" << endl;
             valid_path = true;
             break;
         }
         nodeQueue.pop_back();
-
         for(int i=0; i<pNode[id_now].id_link.size(); ++i)
         {
             id_next = pNode[id_now].id_link[i];
-
             if(id_next == pNode[id_now].id_fromWhere) continue;
-
-            if(!pNode[id_next].isDealed)
-            {
-                pNode[id_next].distTilNow = pNode[id_now].distTotal
-                        + pNode[id_now].dist_link[i];
+            if(!pNode[id_next].isDealed){
+                pNode[id_next].distTilNow = pNode[id_now].distTotal + pNode[id_now].dist_link[i];
                 pNode[id_next].id_fromWhere = id_now;
-                pNode[id_next].distToEnd = 0;/*Distance::sqrt(
-                        Distance::compute(
-                            keyPosPC->points[id_startNode], keyPosPC->points[id_endNode]));*/
-                pNode[id_next].distTotal = pNode[id_next].distToEnd
-                        + pNode[id_next].distTilNow;
+                pNode[id_next].distToEnd = 0;/*Distance::sqrt(Distance::compute(keyPosPC->points[id_startNode], keyPosPC->points[id_endNode]));*/
+                pNode[id_next].distTotal = pNode[id_next].distToEnd + pNode[id_next].distTilNow;
                 pNode[id_next].isDealed = true;
-
                 insertSortByDistTotal(id_next, nodeQueue);
-            }
-            else
-            {
+            }else{
                 dtn_tmp = pNode[id_now].distTotal + pNode[id_now].dist_link[i];
                 if(dtn_tmp < pNode[id_next].distTilNow)
                 {
                     pNode[id_next].distTilNow = dtn_tmp;
                     pNode[id_next].id_fromWhere = id_now;
-                    pNode[id_next].distTotal = pNode[id_next].distToEnd
-                            + pNode[id_next].distTilNow;
-
+                    pNode[id_next].distTotal = pNode[id_next].distToEnd + pNode[id_next].distTilNow;
                     int j=0;
                     //erase from queue and readd into queue
                     for(j=0; j<nodeQueue.size(); ++j)
@@ -907,7 +839,7 @@ bool FindPathSRM::astar()
     }
     //find all nodes
     pcl::PointXYZ tmpP;
-    path.push_back(pNode.size()-1);  //push destination first
+    path.push_back(pNode.size()-1);  //push destination first，目的地的序号
     tmpP.x = pNode[pNode.size()-1].x;
     tmpP.y = pNode[pNode.size()-1].y;
     tmpP.z = pNode[pNode.size()-1].z;
@@ -924,7 +856,6 @@ bool FindPathSRM::astar()
     }
     path.push_back(id_startNode);
     path.push_back(pNode.size()-2);  //push start point
-
     tmpP.x = pNode[id_startNode].x;
     tmpP.y = pNode[id_startNode].y;
     tmpP.z = pNode[id_startNode].z;
@@ -933,6 +864,7 @@ bool FindPathSRM::astar()
     tmpP.y = pNode[pNode.size()-2].y;
     tmpP.z = pNode[pNode.size()-2].z;
     path_point.push_back(tmpP);
+
 
     //remove the too near node from start/end point
     pcl::PointXYZRGB startorend, nearone;
@@ -956,31 +888,25 @@ bool FindPathSRM::astar()
         path_point.erase(path_point.begin()+path_point.size()-2);
         path.erase(path.begin()+path.size()-2);
     }
-
     idp_targetNode = path.size() - 1;
     pathid_near_node = path.size() - 1; //which path node drone is near
-
+    pubTargetPW();//此处可以在rviz显示拓扑轨迹，但是当轨迹没有走完再发送目的地会导致process died,增加clear()后，但是多次发送不同目的地时偶尔还会出现died
     justReplan = 500;
     return valid_path;
 }
 
-//insert and sort path node in queue by distTotal, large at begin, small at end
-void FindPathSRM::insertSortByDistTotal(int _id, vector<int> &_nodeQueue)
-{
-    if(_nodeQueue.empty())
-    {
+//insert and sort path node in _nodeQueue by distTotal, large at begin, small at end
+void FindPathSRM::insertSortByDistTotal(int _id, vector<int> &_nodeQueue){
+    if(_nodeQueue.empty()){
         _nodeQueue.push_back(_id);
     }
-    else if(pNode[_id].distTotal > pNode[_nodeQueue[0]].distTotal)
-    {
+    else if(pNode[_id].distTotal > pNode[_nodeQueue[0]].distTotal){
         _nodeQueue.insert(_nodeQueue.begin(), _id);
     }
-    else if(pNode[_id].distTotal < pNode[_nodeQueue[_nodeQueue.size()-1]].distTotal)
-    {
+    else if(pNode[_id].distTotal < pNode[_nodeQueue[_nodeQueue.size()-1]].distTotal){
         _nodeQueue.push_back(_id);
     }
-    else
-    {
+    else{
         int _start=0, _end=_nodeQueue.size()-1, half=0;
         while((_end-_start)>1)
         {
@@ -998,7 +924,7 @@ void FindPathSRM::insertSortByDistTotal(int _id, vector<int> &_nodeQueue)
     }
 }
 
-void FindPathSRM::testShowNode()
+/*void FindPathSRM::testShowNode()
 {
     for(int i=0; i<pNode.size(); ++i)
     {
@@ -1009,7 +935,7 @@ void FindPathSRM::testShowNode()
         }
         cout << endl;
     }
-}
+}*/
 
 void FindPathSRM::testShowQueue(vector<int> &vec)
 {
@@ -1088,11 +1014,9 @@ void FindPathSRM::restartNavCallback(const geometry_msgs::Pose::ConstPtr msg){
     else{
         ROS_INFO("[FINDPATH]replan fail.");
     }
-
     //add removed node back?
     pNode[removenode1].addLink(removenode2, dist);
     pNode[removenode2].addLink(removenode1, dist);
-    
     //res.set_ok = true;
     //return true;
 }

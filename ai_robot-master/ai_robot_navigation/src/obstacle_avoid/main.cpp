@@ -11,6 +11,7 @@
 #include <nav_msgs/Odometry.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <std_msgs/Bool.h>
+#include <std_msgs/String.h>
 #include "../brain/Pioneer3AT.h"
 
 using namespace std;
@@ -104,6 +105,25 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr &msg){
 }
 
 
+//add by xj
+void stoptaskCallback(const std_msgs::String::ConstPtr &msg){
+        stopFlag = true;
+        setLocalTarget = false;
+        ptrpoa->reset();
+        ptrctrl->move(0,0);
+	
+}
+
+void obsAbortCallback(const std_msgs::String::ConstPtr &msg)
+{
+	
+	ptrpoa->reset();
+	stopFlag = false;
+	setLocalTarget = false;
+	printf("+++++++++++++++++++++++++++++++++++\n");
+}
+
+
 int main(int argc, char** argv){
     ros::init(argc, argv,"obsavoid");
     ros::NodeHandle nh;
@@ -112,6 +132,10 @@ int main(int argc, char** argv){
     Pioneer3AT ctrl(nh);
     ptrctrl = &ctrl;
     ros::Subscriber joy_sub = nh.subscribe("/joy", 1, joyCallback);
+    //add by xj
+    ros::Subscriber joy_sub2 = nh.subscribe("/remote/joy",1,joyCallback);
+	ros::Subscriber stop_task = nh.subscribe("/remote/stoptask",1,stoptaskCallback);
+	ros::Subscriber obs_abort = nh.subscribe("/obs_abort", 1, obsAbortCallback);
     ros::Subscriber odom_sub = nh.subscribe("/RosAria/pose", 1, odomCallback);
     //ros::Subscriber ekfpose_sub = nh.subscribe("/est_pose", 1, ekfposeCallback);
     ros::Subscriber tarP_sub = nh.subscribe("/ai_robot/findpath/targetP", 1, targetPCallback);

@@ -25,7 +25,7 @@ name="pioneer3at">
     <joint name="base_link2base_footprint" type="fixed">
       <parent link="base_link" />
       <child link="base_footprint" />
-      <origin xyz="0 0 0.2" />
+      <origin xyz="0 0 -0.2" />
     </joint>
   <link
     name="base_link">
@@ -34,7 +34,7 @@ name="pioneer3at">
         xyz="-0.0020128 -0.010156 0.17923"
         rpy="0 0 0" />
       <mass
-        value="1.798" />
+        value="3.798" />
       <inertia
         ixx="0.34493"
         ixy="0.00017425"

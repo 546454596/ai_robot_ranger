@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Se_elevation/kindr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Se_elevation/kindr_ros" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ai_robot_clean" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/darknet_ros" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/darknet_ros/darknet" vcs="Git" />

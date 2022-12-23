@@ -1,0 +1,10 @@
+使用过程：
+1.打开仿真环境
+roslaunch ranger_mini_gazebo ai_robot_ranger_gazebo.launch
+2.载入地图，打开AMCL定位
+roslaunch ai_robot_nav_demo brainnav.launch path:=true, 但要注释掉<!--include file="$(find nav_demo)/launch/path.launch" /-->
+
+3.打开基于拓扑地图的全局导航
+roslaunch ai_robot_navigation globalnavsim.launch
+4.打开局部避障
+roslaunch ai_robot_navigation obsavoidsim.launch 

@@ -51,8 +51,6 @@ bool p3atObstacleAvoid::gotoLocalTarget(float &vx, float &rz, float ltpose[],flo
     targetOrien[1] = ltq[1];
     targetOrien[2] = ltq[2];
     targetOrien[3] = ltq[3];
-//    cout<<"px:"<<ltpose[0]<<",py:"<<ltpose[1]<<",pz:"<<ltpose[2]<<
-//          ",qw:"<<ltq[0]<<",qx:"<<ltq[1]<<",qy:"<<ltq[2]<<",qz:"<<ltq[3]<<endl;
     double dist = sqrt(pow(ltpose[0],2) + pow(ltpose[1],2));// + pow(ltpose[2],2)
     vx = dist / 4;
     if(vx > max_vx){

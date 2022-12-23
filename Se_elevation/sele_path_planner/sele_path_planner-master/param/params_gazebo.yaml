@@ -1,0 +1,24 @@
+# max_turn_radius/resolution_step denotes when agv turns ?rad/m
+seleplanner/max_turn_radius: 1.57  #31415 #
+seleplanner/robot_radius: 0.35
+#seleplanner/resolution_turn_radius: 0.0157
+#make this n_directions odd
+seleplanner/n_directions: 41 #21
+seleplanner/resolution_step: 0.2
+seleplanner/dwa_total_steps: 10
+seleplanner/MAX_VX: 0.75
+seleplanner/MAX_RZ: 1.57
+seleplanner/dist_discount: 0.1
+seleplanner/step_discount: 2.
+seleplanner/Dheight: 0.1
+seleplanner/height_factor: 0.
+# 0:road, 1:sidewalk, 2:vegetation, 3:terrain, 4:other
+seleplanner/type_factor: [1., 2., 10., 5., 1000.]
+seleplanner/map_frame: odom
+seleplanner/base_frame: base_link
+seleplanner/turn_tune: 1.0
+seleplanner/showdwa: true
+seleplanner/test_flag: false
+seleplanner/unknowgrid_factor: 0.99
+seleplanner/num_stored_target: 1
+seleplanner/backward_flag: false
