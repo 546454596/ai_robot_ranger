@@ -1,0 +1,44 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/cx/brainnavi/ai_robot_ranger/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/ai_robot_clean/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/ai_robot_nav_demo/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/ai_robot-master/ai_robot_navigation/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/amcl/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/clear_costmap_recovery/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/costmap_2d/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/darknet_ros/darknet_ros/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/Se_elevation/elevation_mapping-master/elevation_mapping/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/global_planner/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/Se_elevation/kindr/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/Se_elevation/kindr_ros/kindr_ros/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/Se_elevation/kindr_ros/kindr_rviz_plugins/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/map_server/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/move_base/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/move_slow_and_clear/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/Se_elevation/kindr_ros/multi_dof_joint_trajectory_rviz_plugins/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/nav_core/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/navfn/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/rotate_recovery/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/Se_elevation/sele_path_planner/sele_path_planner-master/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/slam_toolbox/slam_toolbox/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/teb_local_planner/include/**",
+        "/home/cx/brainnavi/ai_robot_ranger/src/navigation/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
