@@ -28,7 +28,7 @@ roslaunch yocs_velocity_smoother standalone.launch
 
 基于拓扑地图的全局规划雨局部避障：
 在该部分代码中，初步实现了输出拓扑轨迹（在使用中，需要注释掉move_base_simple/goal话题，使用globalsim作为目的地输入，并输出拓扑轨迹，用于TEB），并将轨迹传递至TEB模块，但目前实现的无法实现导航至目的地，出现乱跑的行为。
-  //建立了接收拓扑轨迹的topic，作为全局规划的路点，并计算控制速度
+//建立了接收拓扑轨迹的topic，作为全局规划的路点，并计算控制速度
   void MoveBase::pathCB(const nav_msgs::Path &path) {
       geometry_msgs::PoseStamped single_plan_msg;
       planner_plan_->clear();
