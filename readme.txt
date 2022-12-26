@@ -18,4 +18,11 @@ roslaunch elevation_mapping_demos mytest_gazebo2.launch
 roslaunch sele_path_planner testgazebo.launch 
 
 
+对速度进行平滑：
+1.启动仿真场景
+roslaunch ranger_mini_gazebo ai_robot_ranger_gazebo.launch
+2.启动定位与路径规划
+roslaunch ai_robot_nav_demo brainnav.launch path:=true
+3.对TEB输出的速度cmd_vel进一步进行平滑处理，得到sim_p3at/cmd_vel
+roslaunch yocs_velocity_smoother standalone.launch 
 
