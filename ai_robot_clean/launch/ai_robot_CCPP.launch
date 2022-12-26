@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Arguments -->
+    <arg name="map_file" default="$(find nav_demo)/map/mymap.yaml"/>
+
+    <!-- 启动仿真环境 -->
+    <arg name="urdf" default="$(find mycar)/urdf/description/urdf/pioneer3at.urdf" />
+    <param name="robot_description" command="$(find xacro)/xacro.py $(arg urdf)" />
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model pioneer3at_robot" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find mycar)/worlds/batclab.world" />
+    </include>
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <!-- 清扫路径规划器 -->
+    <node pkg="clean_robot" type="path_planning_node" respawn="false" name="path_planning_node" output="screen" clear_params="true">
+        <rosparam file="$(find clean_robot)/config/costmap_common_params.yaml" command="load" ns="cleaning_costmap" />
+        <rosparam file="$(find clean_robot)/config/cleaning_costmap_params.yaml" command="load" />
+    </node>
+   
+    <!-- 根据清扫的路径向导航系统发送目标点位 -->
+    <!-- 设定距离当前目标点多进时候发布下一个目标点 -->
+    <param name="/NextGoal/tolerance_goal" value="0.25" />
+    <!--node name="CCPP_path_point" pkg="clean_robot" type="CCPP_path_point" respawn="true" output="screen"/-->
+    
+    <!-- 载入地图、amcl定位、rviz显示 -->
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)" />
+    <include file="$(find nav_demo)/launch/amcl.launch" />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find nav_demo)/mycar_clean.rviz" />
+
+
+</launch>
