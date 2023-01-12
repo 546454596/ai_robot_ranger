@@ -228,7 +228,6 @@ target_link_libraries(next_goal
 )
 
 add_executable(CCPP_path_point src/CCPP_path_point.cpp)
-target_link_libraries(
-		CCPP_path_point
-		${catkin_LIBRARIES}
+target_link_libraries(CCPP_path_point
+	${catkin_LIBRARIES}
 )

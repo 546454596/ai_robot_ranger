@@ -1,15 +1,3 @@
-/**
- * @file /src/velocity_smoother_nodelet.cpp
- *
- * @brief Velocity smoother implementation.
- *
- * License: BSD
- *   https://raw.github.com/yujinrobot/yujin_ocs/hydro/yocs_velocity_smoother/LICENSE
- **/
-/*****************************************************************************
- ** Includes
- *****************************************************************************/
-
 #include <ros/ros.h>
 #include <nodelet/nodelet.h>
 #include <pluginlib/class_list_macros.h>
@@ -20,24 +8,14 @@
 #include <ecl/threads/thread.hpp>
 
 #include "yocs_velocity_smoother/velocity_smoother_nodelet.hpp"
-
 /*****************************************************************************
  ** Preprocessing
  *****************************************************************************/
-
 #define PERIOD_RECORD_SIZE    5
 #define ZERO_VEL_COMMAND      geometry_msgs::Twist();
 #define IS_ZERO_VEOCITY(a)   ((a.linear.x == 0.0) && (a.angular.z == 0.0))
 
-/*****************************************************************************
-** Namespaces
-*****************************************************************************/
-
 namespace yocs_velocity_smoother {
-
-/*********************
-** Implementation
-**********************/
 
 VelocitySmoother::VelocitySmoother(const std::string &name)
 : name(name)
@@ -148,7 +126,7 @@ void VelocitySmoother::spin()
       {
         ROS_WARN_STREAM("Velocity Smoother : input got inactive leaving us a non-zero target velocity ("
               << target_vel.linear.x << ", " << target_vel.angular.z << "), zeroing...[" << name << "]");
-        target_vel = ZERO_VEL_COMMAND;
+//        target_vel = ZERO_VEL_COMMAND;
       }
     }
 

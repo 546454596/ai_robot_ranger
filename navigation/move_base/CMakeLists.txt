@@ -15,6 +15,7 @@ find_package(catkin REQUIRED
         nav_core
         nav_msgs
         navfn
+
         pluginlib
         roscpp
         rospy
@@ -22,6 +23,14 @@ find_package(catkin REQUIRED
         std_srvs
         tf2_geometry_msgs
         tf2_ros
+
+        cv_bridge
+        roscpp
+        rospy
+        std_srvs
+        std_msgs
+        pcl_conversions
+        pcl_ros
 )
 find_package(Eigen3 REQUIRED)
 add_definitions(${EIGEN3_DEFINITIONS})
@@ -63,6 +72,39 @@ add_dependencies(move_base_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXP
 target_link_libraries(move_base_node move_base)
 set_target_properties(move_base_node PROPERTIES OUTPUT_NAME move_base)
 
+add_executable(obs_avoid src/obsavoid/obs_avoid.cpp)
+add_dependencies(obs_avoid ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(obs_avoid
+        ${Boost_LIBRARIES}
+        ${catkin_LIBRARIES}
+        )
+
+#add_executable(ai_robot_ranger src/ai_robot_ranger.cpp)
+#add_executable(multi_point_inspection src/multi_point_inspection/multi_point_inspection.cpp)
+add_executable(ai_robot_modify
+  src/main.cpp
+  src/AIBrain.cpp
+  src/assistMath.cpp
+  src/posControl.cpp
+  src/Pioneer3AT.cpp
+  src/pointtopoint/PointToPoint.cpp
+  src/Pioneer3AT.cpp
+  src/postrajectory.cpp
+  src/PIDController.cpp
+  src/pid_fuzzy.cpp
+  src/ADRC.cpp
+  src/ARDrone.cpp
+  src/drone_object_ros.cpp
+  src/move_base.cpp
+  src/ESO.cpp
+)
+target_link_libraries(ai_robot_modify
+        move_base
+        ${catkin_LIBRARIES}
+        ${PCL_LIBRARIES}
+        ${OpenCV_LIBS}
+        )
+
 install(
     TARGETS
         move_base_node
@@ -75,7 +117,7 @@ install(
     DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
 
-## Mark cpp header files for installation
+## Mark cpp header files for installation 安装目录的时候默认会安装所有的文件，如果使用FILES_MATCHING关键字（在第一个PATTERN或者REGEX之前），则表示必须要满足对应的模式或者正则的文件才能被安装。
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h"

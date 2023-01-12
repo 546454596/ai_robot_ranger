@@ -105,6 +105,10 @@ namespace move_base {
 //      bool executeCycle(geometry_msgs::PoseStamped& goal, std::vector<geometry_msgs::PoseStamped>& global_plan);
       bool executeCycle(geometry_msgs::PoseStamped& goal);
 
+      void goalCB(const geometry_msgs::PoseStamped::ConstPtr& goal);
+
+      void planThread();
+
     private:
       /**
        * @brief  A service call that clears the costmaps of obstacles
@@ -132,7 +136,7 @@ namespace move_base {
 
       /**
        * @brief  Load the recovery behaviors for the navigation stack from the parameter server
-       * @param node The ros::NodeHandle to be used for loading parameters 
+       * @param node The ros::NodeHandle to be used for loading parameters
        * @return True if the recovery behaviors were loaded successfully, false otherwise
        */
       bool loadRecoveryBehaviors(ros::NodeHandle node);
@@ -159,11 +163,11 @@ namespace move_base {
        */
       void resetState();
 
-      void goalCB(const geometry_msgs::PoseStamped::ConstPtr& goal);
+//      void goalCB(const geometry_msgs::PoseStamped::ConstPtr& goal);
       void pathCB(const nav_msgs::Path& path);
       bool gotPlan;
 
-      void planThread();
+//      void planThread();
 
       void executeCb(const move_base_msgs::MoveBaseGoalConstPtr& move_base_goal);
 
@@ -201,10 +205,11 @@ namespace move_base {
       int32_t max_planning_retries_;
       uint32_t planning_retries_;
       double conservative_reset_dist_, clearing_radius_;
-      ros::Publisher current_goal_pub_, vel_pub_, action_goal_pub_, recovery_status_pub_;
+      ros::Publisher current_goal_pub_, vel_pub_, action_goal_pub_, recovery_status_pub_, path_pub;
       ros::Subscriber goal_sub_;
       ros::ServiceServer make_plan_srv_, clear_costmaps_srv_;
       ros::Subscriber path_sub;
+      nav_msgs::Path path_msg;
       bool shutdown_costmaps_, clearing_rotation_allowed_, recovery_behavior_enabled_;
       bool make_plan_clear_costmap_, make_plan_add_unreachable_goal_;
       double oscillation_timeout_, oscillation_distance_;
@@ -233,8 +238,6 @@ namespace move_base {
 
       boost::recursive_mutex configuration_mutex_;
       dynamic_reconfigure::Server<move_base::MoveBaseConfig> *dsrv_;
-      
-      void reconfigureCB(move_base::MoveBaseConfig &config, uint32_t level);
 
       move_base::MoveBaseConfig last_config_;
       move_base::MoveBaseConfig default_config_;

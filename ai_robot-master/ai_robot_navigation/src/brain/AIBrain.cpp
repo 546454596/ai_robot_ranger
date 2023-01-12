@@ -72,9 +72,6 @@ void AIBrain::hoverTASK(double _dt)
         else
         {
             poseCtrl.brake(_dt);
-//            poseXYZ_target[0] = poseXYZ_now[0] - velXYZ_now[0]*_dt;
-//            poseXYZ_target[1] = poseXYZ_now[1] - velXYZ_now[1]*_dt;
-//            poseXYZ_target[2] = poseXYZ_now[2] - velXYZ_now[2]*_dt;
         }
     }
     else

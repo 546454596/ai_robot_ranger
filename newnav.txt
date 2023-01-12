@@ -1,0 +1,4 @@
+roslaunch ranger_mini_gazebo ai_robot_ranger_gazebo.launch
+roslaunch ai_robot_nav_demo brainnav.launch path:=true
+roslaunch ai_robot_nav_demo obs_avoid.launch
+roslaunch yocs_velocity_smoother standalone.launch
