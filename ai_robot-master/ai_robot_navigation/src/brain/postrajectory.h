@@ -8,7 +8,7 @@
 #include <ros/time.h>
 #include <math.h>
 #include <ros/callback_queue.h>
-#include <opencv/cv.hpp>
+#include <opencv2/opencv.hpp>
 #include "std_msgs/Float32.h"
 #include "std_msgs/Float64.h"
 #include "std_msgs/Float32MultiArray.h"

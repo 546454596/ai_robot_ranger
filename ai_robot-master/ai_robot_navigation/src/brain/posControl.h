@@ -11,7 +11,7 @@
 #include <math.h>
 #include <ros/callback_queue.h>
 
-#include "opencv/cv.hpp"
+#include <opencv2/opencv.hpp>
 
 #include "geometry_msgs/PoseStamped.h"
 #include "geometry_msgs/TwistStamped.h"

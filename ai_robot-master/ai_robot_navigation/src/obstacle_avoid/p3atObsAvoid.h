@@ -93,6 +93,7 @@ private:
     /// and orientation.y is flag that wether origin target is block(>0 yes, <0 no)
     ros::Publisher replan_pub;
     ros::Subscriber tarP_sub;
+    ros::Subscriber targetodom_sub;
 
     ofstream mylog;
 
@@ -196,6 +197,7 @@ private:
     void lidarCallback(const sensor_msgs::LaserScanConstPtr& msg);
     void lidar3dCallback(const sensor_msgs::PointCloud2ConstPtr& msg);
     void targetPCallback(const geometry_msgs::PoseConstPtr& msg);
+    void targetodomCallback(const geometry_msgs::PoseConstPtr& msg);
 };
 
 #endif
