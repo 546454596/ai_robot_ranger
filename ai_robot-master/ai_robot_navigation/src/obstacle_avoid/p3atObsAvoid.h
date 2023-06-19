@@ -37,6 +37,8 @@
 #include <pcl/common/transforms.h>
 #include <assistMath.h>
 
+#include <nav_msgs/Odometry.h>
+
 using namespace std;
 
 class safeZone{
@@ -54,7 +56,7 @@ public:
 //private:
     float leftP[2], rightP[2];
     float *near, *far;
-    //safedir:0right,1left
+    //safedir:0 right,1 left
     float safe_direction[2];
 };
 
@@ -94,6 +96,7 @@ private:
     ros::Publisher replan_pub;
     ros::Subscriber tarP_sub;
     ros::Subscriber targetodom_sub;
+    ros::Subscriber odom_sub;
 
     ofstream mylog;
 
@@ -104,6 +107,7 @@ private:
     double max_vx, max_rz, min_turn_radius;
     double safezone_rest_wide;
     double largest_err_direction;
+    float lastdir = 0.0;
 
     //sonar
     pcl::PointCloud<pcl::PointXYZ> pc_now;
@@ -144,6 +148,9 @@ private:
     double time_of_halfpi;
     double det_tolar;
 
+    //robot's width   robot's safe gap
+    double robot_width, robot_safe_gap = 0.1;
+
     //3d lidar point cloud
     bool isUsed3dLidar;
     double start_height_of_3dlidar;
@@ -180,8 +187,14 @@ private:
     float targetOrien[4];//w,x,y,z
     int targetPisBlocked;
 
+    // to judge new local taget
+    float lastltpose[3] = {0.0, 0.0, 0.0};
+    float dist_const = 0.0;
+
+    float lastvx = 0.0, lastrz = 0.0;
+    int turnback_cnt = 0;
     //smooth velocity
-    float last_vx, last_rz;
+    float last_vx=0.0, last_rz=0.0;
     void smooth(float &vx, float &rz);
     bool is_in_safezone;
 
@@ -189,6 +202,11 @@ private:
     //vx = c_dist * dist
     //rz = (a_theta+b_alpha)*new_dir - b_alpha*dyaw
     double a_theta, b_alpha, c_dist;
+
+    //odom info
+    float odomPose[3] = {0.0,0.0,0.0};
+    float odomOrien[4] = {0,0,0,1};
+    float odomR[9] = {1,0,0,0,1,0,0,0,1};
 
 	void initSubscriber();
     void readParam();
@@ -198,6 +216,7 @@ private:
     void lidar3dCallback(const sensor_msgs::PointCloud2ConstPtr& msg);
     void targetPCallback(const geometry_msgs::PoseConstPtr& msg);
     void targetodomCallback(const geometry_msgs::PoseConstPtr& msg);
+    void odomCallback(const nav_msgs::OdometryConstPtr& msg);
 };
 
 #endif

@@ -51,12 +51,14 @@ bool p3atObstacleAvoid::gotoLocalTarget(float &vx, float &rz, float ltpose[],flo
     targetOrien[1] = ltq[1];
     targetOrien[2] = ltq[2];
     targetOrien[3] = ltq[3];
+
     double dist = sqrt(pow(ltpose[0],2) + pow(ltpose[1],2));// + pow(ltpose[2],2)
-    vx = dist / 4;
+    vx = dist / 4 * 1.5;// Original reference velocity. vx is calculated according to APF method with changed virtual target
+/*     vx = 0.5; // set vx = 0.5 to ensure stable velocity during moving */
     if(vx > max_vx){
-        vx = max_vx;
+        vx = max_vx; // when vx is larger than the velocity threshold, set vx = max_vx.
     }
-    float dyaw = atan2(ltpose[1], ltpose[0]);
+    float dyaw = atan2(ltpose[1], ltpose[0]);//cal orien in base_link frame
     rz = dyaw/M_PI_2*max_rz;
     if(rz > max_rz){
         rz = max_rz;
@@ -64,7 +66,7 @@ bool p3atObstacleAvoid::gotoLocalTarget(float &vx, float &rz, float ltpose[],flo
     else if(rz < -max_rz){
         rz = -max_rz;
     }
-    modifyVel(vx, rz, dyaw, float(dist), findpath);
+    modifyVel(vx, rz, dyaw, float(dist), findpath);// modify velocity according to safezone.
 
     // if (!is_in_safezone)//
     // {
@@ -76,7 +78,7 @@ bool p3atObstacleAvoid::gotoLocalTarget(float &vx, float &rz, float ltpose[],flo
     //         rz=-tmpminrz;
     //     }
     // }
-
+    
     if(dist < 0.1)
         return false;
     else
@@ -86,8 +88,8 @@ bool p3atObstacleAvoid::gotoLocalTarget(float &vx, float &rz, float ltpose[],flo
 bool p3atObstacleAvoid::modifyVel(float &vx, float &rz, float dyaw, float tar_dist, bool findpath){
     //first is restrict force, second is attract force
     //time_begin = clock();
-    int64_t start1=0,end1=0;
-    //struct timeval tstart,tend;
+    int64_t start1=0, end1=0;
+    //struct timeval tstart, tend;
     //double timer;
     //gettimeofday(&tstart,NULL);
     //time_begin = ros::Time::now().toSec();
@@ -165,18 +167,18 @@ bool p3atObstacleAvoid::modifyVelByLidar(float &vx, float &rz, float dyaw, float
     } 
     
     if(fabs(dyaw) > 0.7*half_fov){ //move direction is out of detection
-        vx = 0.05;
+        // vx = 0.05;
+        vx = 0.1;
         return true;
     }
     float err_dyaw_safe, dist, newdir, ddir_between_now_and_chosen_dir;
     //ROS_INFO("[OBSAVOID]1");
     bool in_safe_zone = false;
-    int num_of_nearest_safe = findNearestSafeZone(dyaw, tar_dist, err_dyaw_safe, dist, newdir, ddir_between_now_and_chosen_dir, in_safe_zone);
+    int num_of_nearest_safe = findNearestSafeZone(dyaw, tar_dist, err_dyaw_safe, dist, 
+                                                newdir, ddir_between_now_and_chosen_dir, in_safe_zone);// newdir is the modified dir 
     //ROS_INFO("[OBSAVOID]2");
     mylog << "modify:"<<endl<<"origin vx="<<vx<<", rz="<<rz
           <<", dyaw="<<dyaw/M_PI*180<<", err_dyaw_safe="<<err_dyaw_safe/M_PI*180<<", near safezone dist="<<dist<<", newdir="<<newdir/M_PI*180<<", ddir_between_now_and_chosen_dir="<<ddir_between_now_and_chosen_dir/M_PI*180<<endl;
-
-    //ROS_INFO("[OBSAVOID]3");
     if((num_of_nearest_safe == -1 || err_dyaw_safe > largest_err_direction) && findpath){
         vx = 0;
         rz = 0;
@@ -204,12 +206,47 @@ bool p3atObstacleAvoid::modifyVelByLidar(float &vx, float &rz, float dyaw, float
             //vx = 0;
             return false;
         }
+        /* if(turnback_cnt > 0){
+            if(turnback_cnt == 45){
+                ROS_INFO("[SEPLANNER]moving back");
+            }       
+            --turnback_cnt;
+            vx = -max_vx / 2;
+            int accstep = int(max_vx / 2 / 0.1);
+            // if(rz > lastrz + 0.1){
+            //     rz = lastrz + 0.1;
+            // }
+            // else if(rz < lastrz - 0.1){
+            //     rz = lastrz - 0.1;
+            // }
+            if(turnback_cnt > 45 - accstep){
+                vx = lastvx + 0.1;
+            }
+            else if(lastvx > vx){
+                vx = lastvx - 0.1;
+            }
+            lastvx = vx;
+            lastrz = rz;
+        }
+        if(min_turn_radius > 0 && fabs(rz) != 0){
+            float turnradius = fabs(vx / rz);
+            if(turnradius < min_turn_radius){
+                // || center_dir_dist > lvlabsulute_safe
+                if(in_safe_zone || center_dir_dist > lvlabsulute_safe){// Easy to swing
+                    rz = vx / min_turn_radius * rz / fabs(rz);
+                }
+                else if(!in_safe_zone){
+                    turnback_cnt = 45;
+                }
+            }
+            // ROS_INFO("test");
+            cout << "turn radius: "<<turnradius<<"; is in safe zone: "<<in_safe_zone<<", centerdist: "<<center_dir_dist<<"; vx: "<<vx<<"; rz: "<<rz<<endl;
+        } */
     }
     else{
         if(justReplan>0){
             --justReplan;
         }
-        
         //method 1: no orientation
         // if(fabs(err_dyaw_safe) < 0.00001){
             //?
@@ -270,7 +307,6 @@ bool p3atObstacleAvoid::modifyVelByLidar(float &vx, float &rz, float dyaw, float
 //                rz = -0.15;
 //            }
 //        }
-
         //method 2: with orientation
         float target_yaw, tmproll, tmppitch;
         if(fabs(targetOrien[0])+fabs(targetOrien[1])+fabs(targetOrien[2])+
@@ -280,9 +316,8 @@ bool p3atObstacleAvoid::modifyVelByLidar(float &vx, float &rz, float dyaw, float
         else{
             qToEuler(tmproll, tmppitch, target_yaw, targetOrien);
         }
-        // cout<<dist<<","<<newdir<<","<<target_yaw<<endl;
         //vx = c_dist * center_dir_dist;
-        rz = (a_theta + b_alpha)*newdir - b_alpha*target_yaw;
+        rz = b_alpha*lastdir + (a_theta + b_alpha)*newdir - b_alpha*target_yaw;// newdir is the modified dir avoiding obs
         if(fabs(vx) > 0 && fabs(rz) > 0){
             float dtvx = dist / vx;
             float dtrz = newdir / rz;
@@ -293,8 +328,11 @@ bool p3atObstacleAvoid::modifyVelByLidar(float &vx, float &rz, float dyaw, float
         if(vx > max_vx){
             vx = max_vx;
         }
-        else if(vx < 0.05){
+/*         else if(vx < 0.05){
             vx = 0.05;
+        } */
+        else if(vx < 0.1){
+            vx = 0.1;
         }
         if(rz > max_rz){
             rz = max_rz;
@@ -302,21 +340,22 @@ bool p3atObstacleAvoid::modifyVelByLidar(float &vx, float &rz, float dyaw, float
         else if(rz < -max_rz){
             rz = -max_rz;
         }
-        // judge turning radius
+        //judge turning radius
         if(min_turn_radius > 0 && fabs(rz) != 0){
             float turnradius = fabs(vx / rz);
             if(turnradius < min_turn_radius){
                 // || center_dir_dist > lvlabsulute_safe
-                if(in_safe_zone || center_dir_dist > lvlabsulute_safe){
+                if(in_safe_zone || center_dir_dist > lvlabsulute_safe){// Easy to swing
                     rz = vx / min_turn_radius * rz / fabs(rz);
                 }
                 else{
-                    vx = 0;
+                    vx = 0.05;
                 }
             }
             // ROS_INFO("test");
             cout << "turn radius: "<<turnradius<<"; is in safe zone: "<<in_safe_zone<<", centerdist: "<<center_dir_dist<<"; vx: "<<vx<<"; rz: "<<rz<<endl;
         }
+        lastdir = newdir;
         mylog<<"after vx="<<vx<<", rz="<<rz<<endl;
     }
     
@@ -486,6 +525,7 @@ void p3atObstacleAvoid::initSubscriber()
     //replan_cli = nh.serviceClient<ai_robot::restart_nav>("/ai_robot/restart_nav");
     replan_pub = nh.advertise<geometry_msgs::Pose>("/ai_robot/restart_nav", 1);
     tarP_sub = nh.subscribe("/ai_robot/findpath/targetP", 1, &p3atObstacleAvoid::targetPCallback, this);
+    targetodom_sub = nh.subscribe("/targetP_odom", 1, &p3atObstacleAvoid::targetodomCallback, this);
     safezone_pub = nh.advertise<std_msgs::Float32MultiArray>("/obstacle/safezone", 1);
     if(isUsedLidar){
         lidar_sub = nh.subscribe("/base_scan", 1, &p3atObstacleAvoid::lidarCallback, this);
@@ -526,11 +566,12 @@ void p3atObstacleAvoid::readParam(){
     nh.getParam("a01", a_sonar[7][1]);
     nh.getParam("asonar", asonar);
 
+    nh.param("robot_width", robot_width, 0.7);   
     nh.param("largest_err_direction", largest_err_direction, 1.57);
     nh.param("max_vx", max_vx, 0.5);
     nh.param("max_rz", max_rz, M_PI_2);
     nh.param("min_turn_radius", min_turn_radius, 0.0);
-    nh.param("safezone_rest_wide", safezone_rest_wide, 0.5);
+    nh.param("safezone_rest_wide", safezone_rest_wide, 0.5);//10.8 in yaml
     nh.param("time_of_halfpi", time_of_halfpi, 1.0);
     nh.param("lvlerrthreshold_of_sz", lvlerrthreshold_of_sz, 1.0);
     nh.param("lvlabsulute_safe", lvlabsulute_safe, 1.0);
@@ -548,6 +589,7 @@ void p3atObstacleAvoid::readParam(){
     nh.param("lz", a, 0.0);
     Tlidarbody[2] = 0;
     nh.param("half_fov", half_fov, 0.52);
+
     if(isUsedTof){
         nh.param("sheight_of_cam", start_height_of_cam, -0.42);
         nh.param("obs_timesofdeld_tof", timesofdeld, 4);
@@ -558,7 +600,7 @@ void p3atObstacleAvoid::readParam(){
         nh.param("range_step_size", range_step_size, 0.2);
     }
     else if(isUsedLidar){
-        okdata_halffov = time_of_halfpi*M_PI/2;
+        okdata_halffov = time_of_halfpi*M_PI/2;//1.5*pi/2
         nh.param("obs_timesofdeld", timesofdeld, 4);
         nh.param("obs_dangle", dangle, 0.058);
         nh.param("deld", deld, 0.5);
@@ -580,8 +622,8 @@ void p3atObstacleAvoid::readParam(){
     nh.param("a_theta", a_theta, 0.5);
     nh.param("b_alpha", b_alpha, 0.1);
     nh.param("c_dist", c_dist, 0.25);
-    nh.param("det_tolar", det_tolar, 2.0);
-
+    nh.param("det_tolar", det_tolar, 2.0);// det_tolar is 3 in yaml
+    
     mylog.open(logfile);
 }
 /*
@@ -1073,7 +1115,7 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
     safezone_vec.clear();
     float _angle = msg->angle_min;
     pcl::PointXYZ tmpP(0,0,0);
-    int start_in_msg=0;
+    int start_in_msg = 0;
     vector<int> sudden_change_p;
     //ROS_INFO("[obstesttime]1");
     for(int i=0; i<msg->ranges.size(); ++i){
@@ -1087,7 +1129,7 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
                 imgx = col_img/2 - int((msg->ranges[i]*sin(_angle)+Tlidarbody[1])*row_img/5);
                 imgy = row_img- 1 - int((msg->ranges[i]*cos(_angle)+Tlidarbody[0])*row_img/5);
                 if(imgx>=0 && imgx<col_img && imgy>=0 && imgy<row_img){
-                    cv::circle(safezone_view, cv::Point(imgx, imgy), 1, cv::Scalar(0,0,0),2);
+                    cv::circle(safezone_view, cv::Point(imgx, imgy), 1, cv::Scalar(0,0,0),2);// the lidar point's radius is 1 here
                 }
             }
             /*
@@ -1137,7 +1179,7 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
     //float deld=0.46;
     //int timesofdeld=4;
     safeZone tmpsz;
-    cv::Point2f start_point(2.03,0), end_point(2.03,0);  //this store dis in x and angle in y
+    cv::Point2f start_point(2.03,0), end_point(2.03,0);  //this store dis by x and angle by y
     //every 10/3 degree
     //float dangle = 0.174/3;
     int lastobspoint=0, last_dist_level=-1;
@@ -1148,22 +1190,24 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
     bool last_obs_exist = false;
     float midangle = 1;
     vector<int> all_levels;
-    float targetdir = atan2(targetP.y, targetP.x), minerr = 100;
+    float targetdir = atan2(targetP.y, targetP.x), minerr = 100;//targetP is local target in base_link frame
     int num_of_dir = -1;
     double last_safezone_leftbound = -M_PI;
     // double min_dist_of_sz, max_dist_of_sz;
     // int startlvl;
     // float threshold_saveedgelvlerr = 2*deld/range_step_size;
     // bool sz_should_stop;
-    for(_angle = -half_fov; _angle <= half_fov; _angle += dangle){
+    for(_angle = -half_fov; _angle <= half_fov; _angle += dangle){ // half field of view(rad), half_fov: 1.52.
+                                                                   // dangle is the same to angle_increment.
         float delx = range_step_size*cos(_angle), dely = range_step_size*sin(_angle);
-        float firstx = (deadzone)*cos(_angle), firsty = (deadzone)*sin(_angle);
+        float firstx = (deadzone)*cos(_angle), firsty = (deadzone)*sin(_angle);//dead zone, radius of circle around robot you want to ignore
+//deadzone: 0.0
         tmpP.x = -Tlidarbody[0]+ firstx;
         tmpP.y = -Tlidarbody[1]+ firsty;
         res.clear();
         obsexist = false;
         for(i=0; i<timesofdeld; ++i){
-            lidarxyzOct.radiusNeighbors<unibn::L2Distance<pcl::PointXYZ> >(tmpP, deld/2, res);
+            lidarxyzOct.radiusNeighbors<unibn::L2Distance<pcl::PointXYZ> >(tmpP, deld/2, res);//# deld=0.6. diameter of search circle diameter, both 3d and 2d lidar
             if(res.size() > det_tolar){
                 // mylog << "obsexist "<<tmpP.x<<", "<<tmpP.y<<", "<<i<<endl;
                 // for(int kkk=0; kkk<res.size(); ++kkk){
@@ -1181,16 +1225,16 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
             tmpP.x += delx;
             tmpP.y += dely;
         }
-        if(fabs(_angle) < midangle){
+        if(fabs(_angle) < midangle){// 初始的midangle = 1;
             center_dir_dist = i * range_step_size;
             midangle = fabs(_angle);
         }
         all_levels.push_back(i);
-        if(fabs(_angle-targetdir) < minerr){
+        if(fabs(_angle-targetdir) < minerr){// original value is 100
             num_of_dir = all_levels.size()-1;
             minerr = fabs(_angle-targetdir);
         }
-        if(last_dist_level < 0){
+        if(last_dist_level < 0){//original value is -1
             last_dist_level = i;
             continue;
         }
@@ -1204,16 +1248,16 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
         //     min_dist_of_sz = i;
         // }
         if(snstart){
-            // if(cnt_safescan > 0)-lvlerrthreshold_of_sz
+            // if(cnt_safescan > 0)-lvlerrthreshold_of_sz  
                 ++cnt_safescan;
-            //fabs(startlvl - i)
-            if((i <= (last_dist_level-lvlerrthreshold_of_sz) || (last_dist_level>=timesofdeld && i < last_dist_level))){
+            //fabs(startlvl - i)           
+            if((i <= (last_dist_level-lvlerrthreshold_of_sz) || (last_dist_level>=timesofdeld && i < last_dist_level))){//lvlerrthreshold_of_sz=1
                 if(fabs(i*range_step_size + deadzone - start_point.x) < safezone_rest_wide){
                 //end a safezone(obsexist && last_dist_level==4) ||
                 snstart = false;
                 //because it is the blocked one, so minus to last one
                 end_point.x = i*range_step_size + deadzone;//msg->ranges[start_in_msg+res[0]];//
-                end_point.y = _angle - dangle;// + 0.149
+                end_point.y = _angle - dangle;// + 0.149  dangle=0.005.  obs detect increment angle(rad) around z axix
                 llevel = i;
                 mylog<<" end:"<<end_point.x<<","<<end_point.y<<", cnt_safescan:"<<cnt_safescan<<endl; //&& fabs(end_point.y-start_point.y) >= dangle
                 // removed parts: && fabs(end_point.y-start_point.y) >= 0.5*dangle
@@ -1269,7 +1313,7 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
             // min_dist_of_sz = 100;
             // max_dist_of_sz = -1;
             //no obs or sudden start
-            if((i >= (last_dist_level+lvlerrthreshold_of_sz)) || !obsexist){//
+            if((i >= (last_dist_level+lvlerrthreshold_of_sz)) || !obsexist){//here
                 snstart = true;
                 // if(msg->ranges[start_in_msg+lastobspoint]>4)
                 //     start_point.x = 4;
@@ -1435,7 +1479,6 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
             nextlevel = level;
             while(nextlevel == level && step < 15 && (num_of_dir+step)<all_levels.size()){
                 nextlevel = all_levels[num_of_dir+step];
-                //cout<<"level:"<<level<<",nextlevel:"<<nextlevel<<endl;
                 ++step;
             }
             if(level <= nextlevel){
@@ -1445,12 +1488,9 @@ void p3atObstacleAvoid::findSZOctree(const sensor_msgs::LaserScanConstPtr& msg){
             end_point.y = -half_fov + dangle*(num_of_dir+step-1);
             rlevel = level - 1;
             tmpsz.setSimpleSZ(end_point.x, end_point.y, start_point.x, start_point.y, llevel, rlevel, deld);
-            //safezone_vec.push_back(tmpsz);
             safezone_vec.insert(safezone_vec.begin(), tmpsz);
         }
     }
-    //ROS_INFO("[obstesttime]end");
-    //cout<<"findoctree"<<endl;
 }
 
 bool p3atObstacleAvoid::suddenChangeExist(float rang, float lang, const sensor_msgs::LaserScanConstPtr& msg, vector<int> &sudden_v, int &start_id_of_sc){
@@ -1925,6 +1965,26 @@ void p3atObstacleAvoid::targetPCallback(const geometry_msgs::PoseConstPtr &msg){
     targetOrien[2] = msg->orientation.y;
     targetOrien[3] = msg->orientation.z;
     //cout<<"[obs]get targetp:"<<targetP.x<<","<<targetP.y<<","<<targetP.z<<endl;
+    cout << "targetOrien in p3atObstacleAvoid::targetPCallback is: " << targetOrien[0] << " " << targetOrien[1] << " " << targetOrien[2] << " " << targetOrien[3]<< endl;
+}
+
+void p3atObstacleAvoid::targetodomCallback(const geometry_msgs::PoseConstPtr &msg){
+    float tmp[3], tmpR[9];
+    tmp[0] = msg->position.x;
+    tmp[1] = msg->position.y;
+    tmp[2] = msg->position.z;
+    transform_body_from_NWUworld(targetP.x, targetP.y, targetP.z, tmp[0], tmp[1], tmp[2],odomR, odomPose);
+}
+
+void p3atObstacleAvoid::odomCallback(const nav_msgs::OdometryConstPtr& msg){
+    odomPose[0] = msg->pose.pose.position.x;
+    odomPose[1] = msg->pose.pose.position.y;
+    odomPose[2] = msg->pose.pose.position.z;
+    odomOrien[0] = msg->pose.pose.orientation.w;
+    odomOrien[1] = msg->pose.pose.orientation.x;
+    odomOrien[2] = msg->pose.pose.orientation.y;
+    odomOrien[3] = msg->pose.pose.orientation.z;
+    qToRotation(odomOrien, odomR);
 }
 
 ///
@@ -1946,37 +2006,37 @@ int p3atObstacleAvoid::findNearestSafeZone(float dyaw, float tar_dist, float &d_
     mylog <<"all "<<safezone_vec.size()<<" safezone"<<endl;
     //for view
     int imglx, imgly, imgrx, imgry;
-    //ROS_INFO("[ininin]1");
-    //cout<<"size="<<safezone_vec.size()<<endl;
     bool tmp_is_in_safe_zone;
-    for(int i=0; i<safezone_vec.size(); ++i){
-        //cout<<"ooo  "<<i<<endl;
-
-        tmpdtheta = safezone_vec[i].getdTheta(dyaw, tar_dist, tmpdist, tmpdir,tmp_is_in_safe_zone);
-
-        //cout<<"zone["<<i<<"]:lp[0]="<<safezone_vec[i].leftP[0]<<", lp[1]="<<safezone_vec[i].leftP[1]*180/M_PI<<", rp[0]="<<safezone_vec[i].rightP[0]<<", rp[1]="<<safezone_vec[i].rightP[1]*180/M_PI<<", safedir:"<<safezone_vec[i].safe_direction[0]*180/M_PI<<", "<<safezone_vec[i].safe_direction[1]*180/M_PI<<endl;
-        mylog<<"zone["<<i<<"]:lp[0]="<<safezone_vec[i].leftP[0]<<", lp[1]="<<safezone_vec[i].leftP[1]*180/M_PI<<", rp[0]="<<safezone_vec[i].rightP[0]<<", rp[1]="<<safezone_vec[i].rightP[1]*180/M_PI
-        <<", safedir:"<<safezone_vec[i].safe_direction[0]*180/M_PI<<", "<<safezone_vec[i].safe_direction[1]*180/M_PI
-        <<", dtheta:"<<tmpdtheta<<endl;
-        if(tmpdtheta < -7) continue;
-        if(fabs(tmpdtheta) < fabs(min_dtheta)){
-            // is_in_safezone=tmp_is_in_safe_zone;
-            min_dtheta = tmpdtheta;
-            dist = tmpdist;
-            dir = tmpdir;
-            num_of_nearest = i;
-            ddir_between_now_and_chosen_dir = dir - 0;//safezone_vec[i].getdTheta(0, tar_dist, tmpdist, tmpdir);
-            if(safezone_vec[i].safe_direction[1] > 0 && safezone_vec[i].safe_direction[0] < 0){
-                in_safe_zone = true;
-                is_in_safezone = true;
-            }
-            else{
-                in_safe_zone = false;
-                is_in_safezone = false;
+    for(int i=0; i<safezone_vec.size(); ++i){// find nearest dir without considering the width of safezone
+        float safelx = safezone_vec[i].leftP[0]*cos(safezone_vec[i].leftP[1]);
+        float safely = safezone_vec[i].leftP[0]*sin(safezone_vec[i].leftP[1]);
+        float saferx = safezone_vec[i].rightP[0]*cos(safezone_vec[i].rightP[1]);
+        float safery = safezone_vec[i].rightP[0]*sin(safezone_vec[i].rightP[1]);
+        float safewid = sqrt(pow(safelx-saferx, 2) + pow(safely-safery, 2));
+        if(safewid >= robot_width + robot_safe_gap){// to ensure robot to pass through the safezone
+            tmpdtheta = safezone_vec[i].getdTheta(dyaw, tar_dist, tmpdist, tmpdir,tmp_is_in_safe_zone);
+            mylog<<"zone["<<i<<"]:lp[0]="<<safezone_vec[i].leftP[0]<<", lp[1]="<<safezone_vec[i].leftP[1]*180/M_PI<<", rp[0]="<<safezone_vec[i].rightP[0]<<", rp[1]="<<safezone_vec[i].rightP[1]*180/M_PI
+            <<", safedir:"<<safezone_vec[i].safe_direction[0]*180/M_PI<<", "<<safezone_vec[i].safe_direction[1]*180/M_PI
+            <<", dtheta:"<<tmpdtheta<<endl;
+            if(tmpdtheta < -7) continue;
+            if(fabs(tmpdtheta) < fabs(min_dtheta)){
+                // is_in_safezone=tmp_is_in_safe_zone;
+                min_dtheta = tmpdtheta;
+                dist = tmpdist;
+                dir = tmpdir;
+                num_of_nearest = i;
+                ddir_between_now_and_chosen_dir = dir - 0;//safezone_vec[i].getdTheta(0, tar_dist, tmpdist, tmpdir);
+                if(safezone_vec[i].safe_direction[1] > 0 && safezone_vec[i].safe_direction[0] < 0){
+                    in_safe_zone = true;
+                    is_in_safezone = true;
+                }
+                else{
+                    in_safe_zone = false;
+                    is_in_safezone = false;
+                }
             }
         }
     }
-    //ROS_INFO("[ininin]2");
     d_dir_safe = min_dtheta;
     mylog<<"choose "<<num_of_nearest<<" safezone"<<endl;
     ori_dir = dyaw;
@@ -1989,7 +2049,7 @@ int p3atObstacleAvoid::findNearestSafeZone(float dyaw, float tar_dist, float &d_
         imgrx = col_img/2 - int(safezone_vec[num_of_nearest].rightP[0]*sin(safezone_vec[num_of_nearest].rightP[1])*row_img/5);
         imgry = row_img- 1 - int(safezone_vec[num_of_nearest].rightP[0]*cos(safezone_vec[num_of_nearest].rightP[1])*row_img/5);
         cv::line(safezone_view, cv::Point(imglx, imgly), cv::Point(imgrx, imgry), cv::Scalar(0,0,255), 4);
-        //draw original direction
+        //draw target's direction
         imglx = col_img/2 - int(3*sin(dyaw)*row_img/5);
         imgly = row_img- 1 - int(3*cos(dyaw)*row_img/5);
         imgrx = col_img/2;
@@ -2005,12 +2065,10 @@ int p3atObstacleAvoid::findNearestSafeZone(float dyaw, float tar_dist, float &d_
         char tmp[21];
         sprintf(tmp, "FPS: %05f", 1000.0/_ti2);
         cv::putText(safezone_view,tmp,cvPoint(0, 40),cv::FONT_HERSHEY_COMPLEX,1,cvScalar(0,0,0,1));
-        
     // imglx = col_img/2 - int(2*sin(dir)*row_img/5);
     // imgly = row_img- 1 - int(2*cos(dir)*row_img/5);
     // cv::line(safezone_view, cv::Point(imglx, imgly), cv::Point(imgrx, imgry), cv::Scalar(111,222,111), 2);
     }
-    //ROS_INFO("[ininin]3");
     return num_of_nearest;
 }
 
@@ -2025,8 +2083,8 @@ inline void p3atObstacleAvoid::xyTodistangle(float x, float y, float& dist, floa
 }
 
 void p3atObstacleAvoid::smooth(float &vx, float &rz){
-    float max_dvx = 0.02, max_drz = 0.03;
-    if(vx - last_vx > max_dvx){
+    float max_dvx = 0.2, max_drz = 0.3;
+/*     if(vx - last_vx > max_dvx){
         vx = last_vx + max_dvx;
     }
     else if(vx - last_vx < -max_dvx){
@@ -2040,6 +2098,22 @@ void p3atObstacleAvoid::smooth(float &vx, float &rz){
     else if(rz - last_rz < -max_drz){
         rz = last_rz - max_drz;
     }
+    last_rz = rz; */
+    int minstepstovx = int(fabs(vx - last_vx) / 0.1)+1;
+    int minstepstorz = int(fabs(rz - last_rz) / 0.1)+1;
+    double delvx = 0.1, delrz = 0.1;
+    if(minstepstovx > minstepstorz){
+        delrz = (rz - last_rz) / minstepstovx;
+        delvx = (vx - last_vx) / minstepstovx;
+    }
+    else{
+        delrz = (rz - last_rz) / minstepstorz;
+        delvx = (vx - last_vx) / minstepstorz;
+    }
+    //cout<<"vx:"<<vx<<" rz:"<<rz<<" gol:"<<gol<<" rad:"<<rad<<", delvx:"<<delvx<<", delrz:"<<delrz<<", minstepvx:"<<minstepstovx<<", minsteprz:"<<minstepstorz<<endl;
+    vx = last_vx + delvx;
+    rz = last_rz + delrz; //enable attending to target stimu 
+    last_vx = vx;
     last_rz = rz;
 }
 
@@ -2115,7 +2189,7 @@ void safeZone::setSimpleSZ(float ldis, float lang, float rdis, float rang, int l
 /// \param dyaw, origin desired dir
 /// \param dist, distance of chosen dir
 /// \param dir, chosen dir
-/// \return err between origin desired dir and chosen dir
+/// \return err between chosen dir and origin desired dir
 ///
 float safeZone::getdTheta(float dyaw, float tar_dist, float& dist, float& dir, bool& is_in_safezone){
     if(rightP[0] < 0 || leftP[0] < 0){
