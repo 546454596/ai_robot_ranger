@@ -1,5 +1,6 @@
 <launch>
   <arg name="threeD" default="false"/>
+  <arg name="vel_smooth" default="true"/>
   <arg name="paramfile" default="params_oa_hokuyo.yaml"/>
   <arg name="point_cloud_topic" default="sensors/lidar/points"/>
   <rosparam command="load" file="$(find ai_robot_navigation)/param/$(arg paramfile)"/>
@@ -7,14 +8,19 @@
 
   <node name="obsavoid" pkg="ai_robot_navigation" type="obsavoid_node" respawn="false" output="screen">
     <remap from="base_scan" to="scan" /> 
-    <remap from="/RosAria/pose" to="/sim_p3at/odom" /> 
-    <remap from="RosAria/cmd_vel" to="sim_p3at/cmd_vel" />
+    <remap if="$(arg vel_smooth)" from="RosAria/cmd_vel" to="cmd_vel" /> 
+    <remap unless="$(arg vel_smooth)" from="RosAria/cmd_vel" to="sim_p3at/cmd_vel"/>  
+    <remap from="/RosAria/pose" to="/sim_p3at/odom" />
   </node>
 
   <node name="pointcloud_viewer_node" pkg="ai_robot_navigation" type="pointcloud_viewer_node" respawn="false" output="screen" if="$(arg threeD)">
     <remap from="points" to="sensors/lidar/points" />
   </node>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ai_robot_nav_demo)/obsavoidsim_visual.rviz" />
+  <!--node name="rviz" pkg="rviz" type="rviz" args="-d $(find ai_robot_nav_demo)/obsavoidsim_visual.rviz" /-->
+
+  <node name="joystick" pkg="joy" type="joy_node" respawn="false" output="screen">
+    <param name="dev"	value="/dev/input/js0" />
+  </node>  
 </launch>
 
