@@ -16,8 +16,11 @@ c_dist: 0.125
 
 max_vx: 0.5
 max_rz: 0.87
-min_turn_radius: 0
+min_turn_radius: 0.0
 #1.25
+
+#robot's width
+robot_width: 0.3
 
 # detection tolarent of obstacles, the smaller the stricter
 det_tolar: 3
@@ -47,7 +50,7 @@ viewsafezonelidar: true
 obs_timesofdeld: 25
 # step size of each step in range in one direction, 2d
 range_step_size: 0.1
-# obs detect increment angle(rad) around z axix, both 3d and 2d lidar
+# obs detect increment angle(rad) around z axix, both 3d and 2d lidar. The same to angle_increment.
 obs_dangle: 0.005
 # diameter of search circle diameter, both 3d and 2d lidar
 deld: 0.6
@@ -56,6 +59,9 @@ OA_MAX_ANGULAR_SPEED: 1.5708
 # tell program that data from -time_of_halfpi*pi/2 to time_of_halfpi*pi/2 is ok
 # for 2d and 3d lidar
 time_of_halfpi: 1.5
+
+#whether used in visual navigation. Get param from **.yaml
+used_in_visual_obsavoid: true 
 
 #3d lidar
 use3dlidar: false
